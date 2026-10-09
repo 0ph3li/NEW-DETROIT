@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEW DETROIT — Blades don't lie. Neither do heels.</title>
+  <meta name="description" content="The official visitor bureau of New Detroit: the city that never sleeps and where everybody poses.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,800;1,500&family=Space+Mono:wght@400;700&family=DotGothic16&family=Noto+Sans+JP:wght@900&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261009-5">
+  <link rel="stylesheet" href="css/home.css?v=20261009-5">
+</head>
+<body class="is-loading" data-page="home">
+
+  <!-- ═════════════ LOADER · a red DETROIT printing itself ═════════════ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-ask">
+      <span class="ld-ask-row"><span>does</span><span>the city</span><span>ever</span><span>sleep</span></span>
+      <span class="ld-ask-row"><span>if</span><span>you</span><span>never</span><span>go home?</span></span>
+    </p>
+    <div class="ld-word" id="ldWord">
+      <span class="ld-layer ld-layer--line">DETROIT</span>
+      <span class="ld-fillwrap"><span class="ld-clip" id="ldClip"><span class="ld-layer ld-layer--fill">DETROIT</span></span></span>
+    </div>
+    <i class="ld-block"></i><i class="ld-block"></i><i class="ld-block"></i>
+    <div class="ld-foot">
+      <span class="ld-pct"><b id="ldPct">00</b>%</span>
+      <span class="mono ld-msg" id="ldMsg">racking the balls</span>
+      <span class="ld-tag">not everyone stays up</span>
+    </div>
+  </div>
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="hdr" id="hdr">
+    <span class="hdr-logo" aria-label="New Detroit">
+      <span class="hdr-mark jp" aria-hidden="true">新</span>
+      <span>NEW DETROIT<small class="mono">official visitor bureau · <span class="jp">新デトロイト</span></small></span>
+    </span>
+    <nav class="hdr-nav" aria-label="Main">
+      <a href="districts.html" data-jp="地区">Districts</a><span aria-hidden="true">•</span>
+      <a href="nightlife.html" data-jp="夜遊び">Nightlife</a><span aria-hidden="true">•</span>
+      <a href="stay.html" data-jp="宿">Stay</a><span aria-hidden="true">•</span>
+      <a href="events.html" data-jp="催し">Events</a><span aria-hidden="true">•</span>
+      <a href="map.html" data-jp="地図">Map</a>
+    </nav>
+    <div class="hdr-right">
+      <span class="hdr-clock mono" title="It is always 2 AM in New Detroit">ND <b id="clock">02:08:00</b></span>
+      <a href="key.html" class="key-btn" data-magnetic>
+        <span class="key-btn-br">[</span>
+        <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        Get the key
+        <span class="key-btn-br">]</span>
+      </a>
+      <button class="hdr-burger mono" id="burger" aria-label="Open menu" aria-expanded="false">menu <b>+</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-list" aria-label="Mobile">
+      <a href="districts.html"><i class="jp">地区</i>Districts</a>
+      <a href="nightlife.html"><i class="jp">夜遊び</i>Nightlife</a>
+      <a href="stay.html"><i class="jp">宿</i>Stay</a>
+      <a href="events.html"><i class="jp">催し</i>Events</a>
+      <a href="map.html"><i class="jp">地図</i>Map</a>
+      <a href="key.html" class="menu-key"><i class="jp">鍵</i>[ Get the key ]</a>
+    </nav>
+    <p class="menu-foot mono">the city doesn't sleep · it poses</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 01 · THE CAMPAIGN — red type stretched over the street
+         ═══════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-stage" id="heroStage">
+        <div class="hero-photos" aria-hidden="false">
+          <div class="hero-ph hero-ph--l" id="phL">
+            <div class="slot fill bw" data-img="img/HOME/campaign-1.jpg" data-pos="45% 50%" data-alt="Towers of light streaking upward in a long exposure">
+              <span class="slot-label">campaign-1.jpg<small>close-up eye / face, night · 4:5</small></span>
+            </div>
+          </div>
+          <div class="hero-ph hero-ph--r" id="phR">
+            <div class="slot fill bw" data-img="img/HOME/campaign-2.jpg" data-pos="40% 50%" data-alt="Neon signs smeared by a moving camera">
+              <span class="slot-label">campaign-2.jpg<small>heel on a guitar · 4:5</small></span>
+            </div>
+          </div>
+          <div class="hero-shade"></div>
+        </div>
+
+        <p class="hero-ask" aria-hidden="true">
+          <span class="hero-ask-row"><span>where</span><span>success</span><span>wears</span><span>silk</span></span>
+          <span class="hero-ask-row"><span>and</span><span>danger</span><span>wears</span><span>a smile</span></span>
+        </p>
+
+        <h1 class="hero-title" id="heroTitle" aria-label="Blades don't lie. Neither do heels. New Detroit.">
+          <span class="ht-line" id="ht1"><span class="ht-in">BLADES DON’T LIE</span></span>
+          <span class="ht-line" id="ht2"><span class="ht-in">NEITHER DO HEELS</span></span>
+        </h1>
+
+        <div class="neon" id="neon" aria-hidden="true">
+          <span class="jp">眠らない街</span>
+          <small class="mono">never sleeps · 24/7</small>
+        </div>
+
+        <div class="hero-foot">
+          <p class="hero-vo" id="heroVo">Welcome to New Detroit — a place built on fast money and slow nights. Where the pool tables glow under diamond lights, and every deal smells like champagne. <b>The city doesn't sleep. It poses.</b></p>
+          <span class="hero-sig">— NEW DETROIT<span class="red">.</span></span>
+        </div>
+
+        <div class="lbox mono" id="lbox">
+          <span class="rec"><i></i>REC <b id="tc">00:00:00:00</b></span>
+          <span>SC. 01 — EXT. SCRAMBLE CROSSING — NIGHT</span>
+          <span class="scroll-cue">scroll <i>↓</i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- zebra crossing -->
+    <div class="zebra" aria-hidden="true"><div class="zebra-track"></div></div>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 02 · THE BIG SCREEN — subtitles lit by scroll
+         ═══════════════════════════════════════════════ -->
+    <section class="vo" id="vo" aria-label="Welcome">
+      <div class="vo-stage" id="voStage">
+        <div class="slot fill bw vo-bg" data-img="img/HOME/screen.jpg" data-fallback="img/HOME/local-3.jpg" data-pos="50% 50%" data-alt="The scramble crossing seen from above">
+          <span class="slot-label">screen.jpg<small>crossing / crowd from above · 16:9</small></span>
+        </div>
+        <div class="vo-led" aria-hidden="true"></div>
+        <div class="vo-frame" aria-hidden="true">
+          <span class="dot vo-corner vo-corner--tl">● LIVE · ND VISION 08</span>
+          <span class="dot vo-corner vo-corner--tr">新デトロイト</span>
+        </div>
+        <div class="vo-subs" id="voSubs">
+          <p class="vo-sub">Welcome to New Detroit.</p>
+          <p class="vo-sub">Where success wears silk, and danger wears a smile.</p>
+          <p class="vo-sub">A place built on fast money and slow nights.</p>
+          <p class="vo-sub">Beauty in the chaos. Class in the smoke. Confidence in every reflection.</p>
+          <p class="vo-sub">Here, everyone wants something — and everyone looks good wanting it.</p>
+          <p class="vo-sub vo-sub--last">Listen close. It whispers: <em>stay shining.</em></p>
+        </div>
+        <div class="vo-ticker dot" aria-hidden="true">
+          <div class="vo-ticker-track"><span>★ 新デトロイト ★ THE CITY DOESN'T SLEEP ★ POP. <b class="pop">2,808,808</b> · AWAKE: ALL OF THEM ★ 眠らない街 ★ NOW 02:00 · ALWAYS 02:00 ★&nbsp;</span><span>★ 新デトロイト ★ THE CITY DOESN'T SLEEP ★ POP. <b class="pop">2,808,808</b> · AWAKE: ALL OF THEM ★ 眠らない街 ★ NOW 02:00 · ALWAYS 02:00 ★&nbsp;</span></div>
+        </div>
+        <span class="vo-count mono"><b id="voIdx">01</b>/06</span>
+      </div>
+    </section>
+
+    <!-- marquee tape -->
+    <div class="tape" aria-hidden="true">
+      <div class="tape-track">
+        <span>STAY SHINING <i>■</i> THE CITY DOESN'T SLEEP <i>■</i> IT POSES <i>■</i> BLADES DON'T LIE <i>■</i> NEITHER DO HEELS <i>■</i></span>
+        <span>STAY SHINING <i>■</i> THE CITY DOESN'T SLEEP <i>■</i> IT POSES <i>■</i> BLADES DON'T LIE <i>■</i> NEITHER DO HEELS <i>■</i></span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 03 · DISTRICTS — five stations, five fabrics
+         ═══════════════════════════════════════════════ -->
+    <section class="dist" id="districts">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 03 — the line map <span class="jp">五つの街</span></p>
+        <h2 class="sec-title" data-split>Five districts.<br>Five fabrics.</h2>
+        <p class="sec-lead">One loop line, five stops, each one with its own texture. Touch one. <span class="mono">(hover · tap)</span></p>
+      </header>
+
+      <div class="swatches" id="swatches">
+        <article class="sw sw--silk is-open">
+          <div class="sw-tex" aria-hidden="true"></div>
+          <div class="sw-row">
+            <div class="sw-sign">
+              <span class="sw-num">ND<b>01</b></span>
+              <span class="sw-names"><span class="jp sw-jp">絹通り</span><span class="sw-name">Silk Row</span></span>
+              <span class="sw-way mono"><span>← fur coast</span><span>chrome heights →</span></span>
+            </div>
+            <span class="sw-fab mono">fabric: silk · charmeuse</span>
+          </div>
+          <div class="sw-body">
+            <div class="slot sw-photo" data-img="img/HOME/silk-row.jpg" data-ratio="4/5" data-pos="52% 50%" data-alt="Silk Row at night">
+              <span class="slot-label">silk-row.jpg<small>boutiques + satin, night · 4:5</small></span>
+            </div>
+            <div class="sw-copy">
+              <p class="sw-line">Old money, new mirrors. The boulevard where every shop window is a dressing room.</p>
+              <p class="mono sw-meta"><b>dress for it:</b> bias-cut slip, borrowed pearls<br><b>best after:</b> 11 PM</p>
+              <a href="districts.html#silk-row" class="txt-link mono sw-go">ride to silk row <i>→</i></a>
+            </div>
+          </div>
+        </article>
+        <article class="sw sw--chrome">
+          <div class="sw-tex" aria-hidden="true"></div>
+          <div class="sw-row">
+            <div class="sw-sign">
+              <span class="sw-num">ND<b>02</b></span>
+              <span class="sw-names"><span class="jp sw-jp">クロム丘</span><span class="sw-name">Chrome Heights</span></span>
+              <span class="sw-way mono"><span>← silk row</span><span>lace district →</span></span>
+            </div>
+            <span class="sw-fab mono">fabric: chrome · liquid metal</span>
+          </div>
+          <div class="sw-body">
+            <div class="slot sw-photo" data-img="img/HOME/chrome-heights.jpg" data-ratio="4/5" data-pos="50% 60%" data-alt="Chrome Heights at night">
+              <span class="slot-label">chrome-heights.jpg<small>towers, screens, reflections · 4:5</small></span>
+            </div>
+            <div class="sw-copy">
+              <p class="sw-line">Towers polished twice a night, screens forty storeys tall, and the occasional angel on the 88th floor.</p>
+              <p class="mono sw-meta"><b>dress for it:</b> mirror shades, nothing matte<br><b>best after:</b> 1 AM</p>
+              <a href="districts.html#chrome-heights" class="txt-link mono sw-go">ride to chrome heights <i>→</i></a>
+            </div>
+          </div>
+        </article>
+        <article class="sw sw--lace">
+          <div class="sw-tex" aria-hidden="true"></div>
+          <div class="sw-row">
+            <div class="sw-sign">
+              <span class="sw-num">ND<b>03</b></span>
+              <span class="sw-names"><span class="jp sw-jp">レース街</span><span class="sw-name">Lace District</span></span>
+              <span class="sw-way mono"><span>← chrome heights</span><span>the pool hall →</span></span>
+            </div>
+            <span class="sw-fab mono">fabric: chantilly lace</span>
+          </div>
+          <div class="sw-body">
+            <div class="slot sw-photo" data-img="img/HOME/lace-district.jpg" data-ratio="4/5" data-pos="38% 50%" data-alt="Lace District at night">
+              <span class="slot-label">lace-district.jpg<small>narrow alleys, ateliers · 4:5</small></span>
+            </div>
+            <div class="sw-copy">
+              <p class="sw-line">Narrow alleys, tiny bars, late ateliers. Nothing here is see-through by accident.</p>
+              <p class="mono sw-meta"><b>dress for it:</b> black lace, one red thing<br><b>best after:</b> midnight</p>
+              <a href="districts.html#lace-district" class="txt-link mono sw-go">ride to lace district <i>→</i></a>
+            </div>
+          </div>
+        </article>
+        <article class="sw sw--velvet">
+          <div class="sw-tex" aria-hidden="true"></div>
+          <div class="sw-row">
+            <div class="sw-sign">
+              <span class="sw-num">ND<b>04</b></span>
+              <span class="sw-names"><span class="jp sw-jp">玉突き場</span><span class="sw-name">The Pool Hall</span></span>
+              <span class="sw-way mono"><span>← lace district</span><span>fur coast →</span></span>
+            </div>
+            <span class="sw-fab mono">fabric: crushed velvet · felt</span>
+          </div>
+          <div class="sw-body">
+            <div class="slot sw-photo" data-img="img/HOME/pool-hall.jpg" data-ratio="4/5" data-pos="50% 75%" data-alt="The Pool Hall at night">
+              <span class="slot-label">pool-hall.jpg<small>tables under hard lights · 4:5</small></span>
+            </div>
+            <div class="sw-copy">
+              <p class="sw-line">Where the tables glow under diamond lights and every deal smells like champagne. Call your pocket.</p>
+              <p class="mono sw-meta"><b>dress for it:</b> velvet blazer, steady hands<br><b>best after:</b> 2 AM</p>
+              <a href="districts.html#pool-hall" class="txt-link mono sw-go">ride to the pool hall <i>→</i></a>
+            </div>
+          </div>
+        </article>
+        <article class="sw sw--leopard">
+          <div class="sw-tex" aria-hidden="true"></div>
+          <div class="sw-row">
+            <div class="sw-sign">
+              <span class="sw-num">ND<b>05</b></span>
+              <span class="sw-names"><span class="jp sw-jp">毛皮海岸</span><span class="sw-name">The Fur Coast</span></span>
+              <span class="sw-way mono"><span>← the pool hall</span><span>silk row →</span></span>
+            </div>
+            <span class="sw-fab mono">fabric: snow leopard (faux, darling)</span>
+          </div>
+          <div class="sw-body">
+            <div class="slot sw-photo" data-img="img/HOME/fur-coast.jpg" data-ratio="4/5" data-pos="50% 62%" data-alt="The Fur Coast at night">
+              <span class="slot-label">fur-coast.jpg<small>frozen waterfront, coats · 4:5</small></span>
+            </div>
+            <div class="sw-copy">
+              <p class="sw-line">The frozen waterfront where the coats come out. Cold weather, warm rumours.</p>
+              <p class="mono sw-meta"><b>dress for it:</b> faux fur, white boots<br><b>best after:</b> first snow</p>
+              <a href="districts.html#fur-coast" class="txt-link mono sw-go">ride to the fur coast <i>→</i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <a href="districts.html" class="txt-link mono dist-all">ride the whole loop line <i>→</i></a>
+      <a href="key.html#test" class="txt-link mono dist-all dist-test">or take the night test: which district are you? <i>→</i></a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 04 · TONIGHT — departure board
+         ═══════════════════════════════════════════════ -->
+    <section class="tonight" id="tonight">
+      <header class="sec-head sec-head--dark">
+        <p class="kicker mono">sc. 04 — tonight <span class="jp">今夜</span></p>
+        <h2 class="sec-title" data-split>Last train?<br>Never heard of it.</h2>
+      </header>
+      <div class="board" id="board">
+        <div class="board-top dot">
+          <span>今夜の出発 · TONIGHT'S DEPARTURES</span>
+          <span>ND <b id="boardClock">02:08</b></span>
+        </div>
+        <div class="board-head mono" aria-hidden="true">
+          <span>time</span><span>venue</span><span>district</span><span>dress code</span><span>status</span>
+        </div>
+        <div class="board-rows" id="boardRows"></div>
+        <p class="board-note dot">★ ALL VENUES OPEN UNTIL THE SUN GIVES UP ★</p>
+      </div>
+      <a href="nightlife.html" class="txt-link mono">full nightlife guide — clubs, pool halls, bars <i>→</i></a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 05 · IT POSES — viewfinder + flash
+         ═══════════════════════════════════════════════ -->
+    <section class="pose" id="pose">
+      <header class="pose-head">
+        <p class="kicker mono">sc. 05 — locals <span class="jp">はい、チーズ</span></p>
+        <h2 class="sec-title" data-split>The city doesn't sleep.<br>It poses.</h2>
+        <p class="sec-lead">Point. Shoot. Nobody here has ever been caught off guard. <span class="mono red">(click a photo)</span></p>
+      </header>
+
+      <div class="pose-wall" id="poseWall">
+        <figure class="pz pz--1" data-story="She swore the lanterns follow you home." tabindex="0" role="button" aria-label="lantern alley, lace district: open the shot"><div class="slot" data-img="img/HOME/local-1.jpg" data-ratio="4/3" data-alt="Lanterns over a narrow alley of shuttered shops"><span class="slot-label">local-1.jpg<small>4:3</small></span></div><figcaption class="mono"><span>#0081 · lantern alley</span><em>lace district</em></figcaption></figure>
+        <figure class="pz pz--2" data-story="Forty storeys tall and still checking her angles." tabindex="0" role="button" aria-label="the big screen, chrome heights: open the shot"><div class="slot" data-img="img/HOME/local-2.jpg" data-ratio="1/1" data-alt="A giant pixel face glowing on a building screen"><span class="slot-label">local-2.jpg<small>1:1</small></span></div><figcaption class="mono"><span>#0233 · the big screen</span><em>chrome heights</em></figcaption></figure>
+        <figure class="pz pz--3" data-story="Three thousand people cross. Every one of them posed." tabindex="0" role="button" aria-label="the scramble, 02:08 AM: open the shot"><div class="slot" data-img="img/HOME/local-3.jpg" data-ratio="9/16" data-alt="The scramble crossing under walls of neon signs"><span class="slot-label">local-3.jpg<small>9:16</small></span></div><figcaption class="mono"><span>#0408 · the scramble</span><em>02:08 AM</em></figcaption></figure>
+        <figure class="pz pz--4" data-story="Even the gods here have a good side." tabindex="0" role="button" aria-label="the shrine, between towers: open the shot"><div class="slot" data-img="img/HOME/local-4.jpg" data-ratio="9/16" data-alt="A red torii gate between glass towers"><span class="slot-label">local-4.jpg<small>9:16</small></span></div><figcaption class="mono"><span>#0666 · the shrine</span><em>between towers</em></figcaption></figure>
+        <figure class="pz pz--5" data-story="The lanterns pose too. They learned from us." tabindex="0" role="button" aria-label="paper faces, silk row: open the shot"><div class="slot" data-img="img/HOME/local-5.jpg" data-ratio="3/4" data-alt="Stacked paper lantern boxes painted with faces"><span class="slot-label">local-5.jpg<small>3:4</small></span></div><figcaption class="mono"><span>#0888 · paper faces</span><em>silk row</em></figcaption></figure>
+        <p class="pose-count mono">flashes tonight: <b id="flashes">0000</b></p>
+      </div>
+
+      <div class="pz-box" id="pzBox" aria-hidden="true">
+        <figure class="pz-print" id="pzPrint">
+          <div class="pz-print-img"><img id="pzImg" alt=""></div>
+          <figcaption>
+            <span class="mono" id="pzNum"></span>
+            <p class="pz-story" id="pzStory"></p>
+          </figcaption>
+          <span class="pz-stamp jp" aria-hidden="true">撮影済</span>
+        </figure>
+        <p class="pz-close mono">click anywhere · esc to put it back</p>
+      </div>
+
+      <div class="viewfinder" id="viewfinder" aria-hidden="true">
+        <i class="vf-c vf-c--tl"></i><i class="vf-c vf-c--tr"></i><i class="vf-c vf-c--bl"></i><i class="vf-c vf-c--br"></i>
+        <span class="vf-rec mono"><i></i>REC</span><span class="vf-iso mono">ISO 3200 · f/1.4</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 06 · ON THE WALL (wheatpaste posters, tear them)
+         ═══════════════════════════════════════════════ -->
+    <section class="wall" id="wall">
+      <div class="wall-copy">
+        <p class="kicker mono">sc. 06 — posted last night <span class="jp">貼り紙</span></p>
+        <h2 class="sec-title" data-split>Pop-ups. Runways.<br>Rip one off.</h2>
+        <p class="sec-lead">The walls of New Detroit change faster than the outfits. Tear the top poster to see what's under it.</p>
+        <a href="events.html" class="txt-link mono">all events <i>→</i></a>
+      </div>
+      <div class="posters" id="posters">
+        <!-- filled + recycled by home.js -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 07 · THE KEY (chrome, spins, drag it)
+         ═══════════════════════════════════════════════ -->
+    <section class="keysec" id="key">
+      <div class="keysec-velvet" aria-hidden="true"></div>
+      <p class="kicker mono">sc. 07 — the end credits are a door</p>
+      <div class="key3d" id="key3d" aria-hidden="true">
+        <div class="key3d-in" id="keyIn"></div>
+        <span class="key3d-shadow"></span>
+      </div>
+      <h2 class="key-title">The city has one key.<br><span class="red">It could be yours.</span></h2>
+      <p class="key-hint mono">drag it · it spins back</p>
+      <a href="key.html" class="key-btn key-btn--big" data-magnetic>
+        <span class="key-btn-br">[</span> Get the key <span class="key-btn-br">]</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="ft" id="footer">
+    <!-- the end credits are a poster -->
+    <div class="ft-poster" id="ftPoster">
+      <div class="slot fill bw" data-img="img/HOME/footer.jpg" data-pos="50% 58%" data-alt="The New Detroit skyline glowing over the bay at night">
+        <span class="slot-label">footer.jpg<small>wide B&amp;W crowd / street at night · 16:9</small></span>
+      </div>
+      <div class="ft-shade" aria-hidden="true"></div>
+      <p class="ft-ask" aria-hidden="true">
+        <span class="ft-ask-row"><span>does</span><span>a city</span><span>need</span><span>a</span><span>bedtime</span></span>
+        <span class="ft-ask-row"><span>if</span><span>nobody</span><span>ever</span><span>goes home?</span></span>
+      </p>
+      <h2 class="ft-word" id="ftWord" aria-label="Stay shining"><span class="ft-word-in">STAY SHINING</span></h2>
+      <p class="ft-tag">not everyone makes it to sunrise.</p>
+    </div>
+
+    <div class="ft-bar">
+      <a href="key.html" class="ft-cta">Get the key <i aria-hidden="true">→</i></a>
+      <div class="ft-grid">
+        <div>
+          <p class="mono ft-h">the bureau</p>
+          <p class="ft-txt">New Detroit Visitor Bureau<br>8 Chrome Heights Plaza, 88th floor<br>open 24/7 · obviously</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="mono ft-h">pages</p>
+          <a href="districts.html">Districts</a><a href="nightlife.html">Nightlife</a><a href="stay.html">Stay</a><a href="events.html">Events</a><a href="map.html">Map</a>
+        </nav>
+        <div>
+          <p class="mono ft-h">city rules</p>
+          <ol class="ft-rules">
+            <li>Blades don't lie.</li>
+            <li>Neither do heels.</li>
+            <li>Never sleep. Always pose.</li>
+            <li>Stay shining.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-sign">concept, design &amp; code by <span class="script">ghostly.grl</span> <b class="red">♥</b></p>
+      <p class="mono">© 2026 New Detroit · a city that does not exist</p>
+      <a href="#top" class="mono ft-top" data-scrollto>back to the opening shot ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b9b9b9"/>
+        <stop offset=".45" stop-color="#f5f5f2"/><stop offset=".55" stop-color="#4a4a4a"/>
+        <stop offset=".72" stop-color="#d8d8d4"/><stop offset="1" stop-color="#7a7a7a"/>
+      </linearGradient>
+      <symbol id="i-key" viewBox="0 0 64 24">
+        <circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="12" r="2.5" fill="currentColor"/>
+        <path d="M19 10.5h40v3H19z" fill="currentColor"/>
+        <path d="M50 13.5h3v6h-3zM56 13.5h3v8h-3zM44 13.5h2.5v4H44z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261009-5"></script>
+  <script src="js/home.js?v=20261009-5"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

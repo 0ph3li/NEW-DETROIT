@@ -1,0 +1,133 @@
+/* =========================================================
+   NEW DETROIT — stay.css
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* =========================================================
+   SC. 01 · DO NOT DISTURB — poster opener
+   ========================================================= */
+.sh { position: relative; height: 100svh; min-height: 600px; overflow: hidden; background: var(--ink-2); }
+.sh .slot-label { top: 40%; }
+.sh-shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(10, 10, 10, .65) 0%, transparent 28%, transparent 50%, rgba(10, 10, 10, .85) 100%); }
+.hero-ask { top: calc(var(--hdr-h) + 18px); right: calc(var(--gutter) + 64px); }
+.sh-neon {
+  position: absolute; right: var(--gutter); top: calc(var(--hdr-h) + 14px); z-index: 3; display: flex; align-items: center; gap: 10px; padding: 12px 7px; writing-mode: vertical-rl;
+  background: var(--red); color: var(--bone); box-shadow: 0 0 36px rgba(211, 18, 27, .55); animation: neon 5s steps(1) infinite;
+}
+.sh-neon .jp { font-size: clamp(18px, 1.7vw, 26px); letter-spacing: .1em; }
+.sh-neon small { font-size: 11px; letter-spacing: .2em; }
+@keyframes neon { 0%, 100% { opacity: 1; } 31% { opacity: .35; } 32% { opacity: 1; } 34% { opacity: .5; } 35% { opacity: 1; } 78% { opacity: .4; } 79% { opacity: 1; } }
+.sh-title { position: absolute; left: 0; right: 0; bottom: 21%; z-index: 2; margin: 0; display: grid; justify-items: center; pointer-events: none; }
+.sh-line { display: block; }
+.sh-in { display: inline-block; width: max-content; white-space: nowrap; font-family: var(--cond); font-weight: 700; line-height: .8; letter-spacing: -.01em; color: var(--red); transform: scaleY(var(--sy, 1)); transform-origin: 50% 0; }
+.sh-in i { font-style: normal; display: inline-block; transform-origin: 50% 100%; }
+.sh-foot { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 28px; z-index: 3; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
+.sh-lead { max-width: 520px; margin: 0; padding: 12px 14px; background: rgba(10, 10, 10, .85); font-size: clamp(11px, .92vw, 13.5px); font-weight: 600; line-height: 1.55; letter-spacing: .08em; text-transform: uppercase; }
+.sh-sig { color: var(--graphite); }
+.sh-sig .jp { color: var(--red); font-size: 12px; margin-left: 6px; }
+
+/* =========================================================
+   SC. 02 · RECEPTION — key rack + bell
+   ========================================================= */
+.desk { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(30px, 5vw, 80px); align-items: start; padding: clamp(90px, 11vw, 150px) var(--gutter); background: var(--bone); color: var(--ink); }
+.desk .kicker { color: #5d5951; }
+.desk .test-link { margin-top: 22px; color: var(--ink); }
+.desk .test-link:hover { color: var(--red); }
+.bell { display: inline-flex; align-items: center; gap: 14px; margin-top: 34px; padding: 0; border: 0; background: none; color: var(--ink); }
+.bell svg { width: 110px; overflow: visible; }
+.bell-base { fill: var(--ink); }
+.bell-dome { fill: #c9c9c4; stroke: var(--ink); stroke-width: 2; }
+.bell-stem { fill: var(--ink); }
+.bell-btn { fill: var(--red); }
+.bell-shine { fill: none; stroke: #fff; stroke-width: 4; stroke-linecap: round; opacity: .8; }
+.bell .mono { color: var(--red); }
+.bell:hover .bell-dome { fill: #e2e2dd; }
+
+.rack { position: relative; background: #141210; padding: 0 18px 22px; box-shadow: 0 40px 80px rgba(0, 0, 0, .3), inset 0 0 0 6px #0a0908; }
+.rack-top { margin: 0 -18px 18px; padding: 12px 18px; background: var(--red); color: var(--bone); font-size: 15px; }
+.cubbies { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.cubby { position: relative; display: grid; justify-items: center; height: clamp(250px, 24vw, 320px); padding-top: 34px; background: linear-gradient(180deg, #060505, #1c1916); box-shadow: inset 0 14px 24px rgba(0, 0, 0, .9), inset 0 -2px 0 rgba(255, 255, 255, .04); }
+.cubby::before { content: ""; position: absolute; top: 22px; left: 50%; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #fff, #7d7d7d 60%, #2d2d2d); box-shadow: 0 2px 4px rgba(0, 0, 0, .8); }
+.cubby-no { position: absolute; left: 8px; bottom: 6px; color: #ff3b2f; font-size: 13px; text-shadow: 0 0 8px rgba(255, 40, 30, .5); }
+.tag { position: relative; display: grid; justify-items: center; transform-origin: 50% 0; cursor: grab; padding-top: 4px; }
+.tag-key { width: 60px; height: 22px; color: #cfcfca; transform: rotate(90deg) translateX(18px); filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .6)); }
+.tag-body {
+  display: grid; justify-items: center; align-content: center; gap: 4px; width: clamp(78px, 7.6vw, 104px); height: clamp(150px, 14vw, 190px); margin-top: 20px; padding: 0 8px; text-align: center;
+  background: linear-gradient(160deg, #ff3b2f, var(--red) 45%, #8f0c12); color: var(--bone);
+  clip-path: polygon(50% 0, 100% 16%, 100% 84%, 50% 100%, 0 84%, 0 16%);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .2);
+}
+.tag-body b { font-family: var(--cond); font-weight: 700; font-size: clamp(26px, 2.6vw, 36px); line-height: 1; }
+.tag-body span { font-family: var(--cond); font-weight: 600; font-size: 11px; line-height: 1.1; letter-spacing: .06em; text-transform: uppercase; }
+.tag-body .jp { font-size: 10px; opacity: .85; }
+
+/* =========================================================
+   SC. 03 · HOTELS
+   ========================================================= */
+.hotels { padding: clamp(70px, 9vw, 130px) var(--gutter); display: grid; gap: clamp(90px, 11vw, 160px); }
+.hotel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, .9fr); gap: clamp(26px, 3.6vw, 56px); align-items: start; scroll-margin-top: calc(var(--hdr-h) + 20px); }
+.h-photos { position: relative; padding: 0 0 18% 0; }
+.h-main { border: 8px solid var(--bone); box-shadow: 0 30px 60px rgba(0, 0, 0, .5); }
+.h-room { position: absolute; right: -3%; bottom: 0; width: 46%; border: 6px solid var(--bone); box-shadow: 0 20px 40px rgba(0, 0, 0, .6); transform: rotate(4deg); }
+.h-photos .slot > img { transition: transform 1.2s var(--ease-out); }
+.h-photos:hover .slot > img { transform: scale(1.06); }
+.vacancy { position: absolute; left: -10px; top: 22px; z-index: 3; padding: 6px 12px; background: #050505; border: 2px solid var(--red); color: #ff3b2f; font-size: 16px; text-shadow: 0 0 10px rgba(255, 40, 30, .7); box-shadow: 0 0 22px rgba(211, 18, 27, .4); }
+.vacancy b { font-weight: 400; }
+.vacancy.is-full { color: var(--graphite); border-color: #333; text-shadow: none; box-shadow: none; }
+
+.h-meta { margin: 0 0 18px; color: var(--graphite); }
+.h-meta .jp { color: var(--red); font-size: 12px; }
+.h-name { margin: 0 0 .5em; font-family: var(--cond); font-weight: 700; text-transform: uppercase; font-size: clamp(50px, 6vw, 104px); line-height: .86; color: var(--red); transform: scaleY(1.32); transform-origin: 0 0; }
+.h-stars, .rv-stars { margin: 0 0 18px; color: var(--red); font-size: 26px; letter-spacing: .12em; text-shadow: 0 0 12px rgba(255, 40, 30, .5); }
+.h-stars i, .rv-stars i { font-style: normal; color: #2b2b2b; text-shadow: none; }
+.h-line { max-width: 42ch; margin: 0 0 24px; font-size: clamp(17px, 1.35vw, 20px); font-weight: 500; color: var(--ivory); }
+.h-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; padding: 14px 16px; margin-bottom: 16px; background: var(--bone); color: var(--ink); border-left: 7px solid var(--red); }
+.h-price .mono { color: var(--red); }
+.h-price b { font-family: var(--cond); font-size: clamp(30px, 3vw, 44px); line-height: 1; }
+.price-rest { font-family: var(--dot); font-size: 14px; padding: 3px 8px; background: #050505; color: #ff3b2f; }
+.h-amen { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.h-amen li { padding: 5px 9px; border: 1px solid #3a3936; color: var(--ivory-2); }
+
+.h-book { background: var(--bone); color: var(--ink); padding: 22px 20px 20px; box-shadow: 0 30px 60px rgba(0, 0, 0, .35); transform: rotate(-1deg); }
+.h-book .kicker { color: #5d5951; margin-bottom: 12px; }
+.rv-list { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 0; }
+.rv { padding: 12px 0; border-bottom: 1px dashed rgba(10, 10, 10, .3); }
+.rv .rv-stars { margin: 0 0 4px; font-size: 15px; text-shadow: none; }
+.rv .rv-stars i { color: #cfc9bb; }
+.rv p { margin: 0 0 6px; font-size: 16px; font-weight: 600; line-height: 1.3; }
+.rv .mono { color: #6c685f; font-size: 10px; }
+.rv.is-mine { background: rgba(211, 18, 27, .08); margin: 0 -10px; padding: 12px 10px; }
+.rv.is-mine .mono { color: var(--red); }
+
+.sign { display: grid; gap: 8px; }
+.sign > .mono { margin: 0; color: var(--red); }
+.sign-stars { display: flex; gap: 2px; }
+.sign-stars button { padding: 0 2px; border: 0; background: none; font-size: 26px; line-height: 1; color: #cfc9bb; transition: color .15s, transform .25s var(--ease-out); }
+.sign-stars button.is-lit { color: var(--red); }
+.sign-stars button:hover { transform: scale(1.2); }
+.sign input { width: 100%; padding: 10px 12px; border: 2px solid var(--ink); background: #fff; color: var(--ink); font-size: 15px; font-weight: 500; }
+.sign input:focus { outline: none; border-color: var(--red); }
+.sign-go { justify-self: start; display: inline-flex; gap: 10px; padding: 10px 18px; border: 0; background: var(--ink); color: var(--bone); font-family: var(--cond); font-weight: 700; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; transition: background .3s; }
+.sign-go:hover { background: var(--red); }
+.sign-go i { font-style: normal; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1200px) {
+  .hotel { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+  .h-book { grid-column: 1 / -1; max-width: 640px; justify-self: end; width: 100%; }
+}
+@media (max-width: 900px) {
+  .desk { grid-template-columns: 1fr; }
+  .hotel { grid-template-columns: 1fr; }
+  .h-photos { max-width: 440px; width: 88%; }
+  .h-book { justify-self: stretch; }
+}
+@media (max-width: 600px) {
+  .sh-foot { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .sh-title { bottom: 30%; }
+  .hero-ask { top: calc(var(--hdr-h) + 14px); }
+  .cubbies { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cubby { height: 240px; }
+}

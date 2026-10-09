@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get the key — NEW DETROIT</title>
+  <meta name="description" content="The key to New Detroit: forged in chrome, engraved with your name, opens every door after midnight.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,800;1,500&family=Space+Mono:wght@400;700&family=DotGothic16&family=Noto+Sans+JP:wght@900&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261009-5">
+  <link rel="stylesheet" href="css/key.css?v=20261009-5">
+</head>
+<body data-page="key">
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="hdr-logo" aria-label="New Detroit — home">
+      <span class="hdr-mark jp" aria-hidden="true">新</span>
+      <span>NEW DETROIT<small class="mono">official visitor bureau · <span class="jp">新デトロイト</span></small></span>
+    </a>
+    <nav class="hdr-nav" aria-label="Main">
+      <a href="districts.html" data-jp="地区">Districts</a><span aria-hidden="true">•</span>
+      <a href="nightlife.html" data-jp="夜遊び">Nightlife</a><span aria-hidden="true">•</span>
+      <a href="stay.html" data-jp="宿">Stay</a><span aria-hidden="true">•</span>
+      <a href="events.html" data-jp="催し">Events</a><span aria-hidden="true">•</span>
+      <a href="map.html" data-jp="地図">Map</a>
+    </nav>
+    <div class="hdr-right">
+      <span class="hdr-clock mono" title="It is always 2 AM in New Detroit">ND <b id="clock">02:08:00</b></span>
+      <span class="key-btn is-here" aria-current="page">
+        <span class="key-btn-br">[</span>
+        <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        Get the key
+        <span class="key-btn-br">]</span>
+      </span>
+      <button class="hdr-burger mono" id="burger" aria-label="Open menu" aria-expanded="false">menu <b>+</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-list" aria-label="Mobile">
+      <a href="districts.html"><i class="jp">地区</i>Districts</a>
+      <a href="nightlife.html"><i class="jp">夜遊び</i>Nightlife</a>
+      <a href="stay.html"><i class="jp">宿</i>Stay</a>
+      <a href="events.html"><i class="jp">催し</i>Events</a>
+      <a href="map.html"><i class="jp">地図</i>Map</a>
+      <span class="menu-key is-active" aria-current="page"><i class="jp">鍵</i>[ Get the key ]</span>
+    </nav>
+    <p class="menu-foot mono">the city doesn't sleep · it poses</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 01 · THE KEY — poster opener
+         ═══════════════════════════════════════════════ -->
+    <section class="kh" id="kh">
+      <div class="slot fill bw" data-img="img/KEY/hero.jpg" data-fallback="img/HOME/footer.jpg" data-pos="50% 45%" data-alt="Maple trees lit up around a bridge and a torii gate at night">
+        <span class="slot-label">hero.jpg<small>a door / a skyline at night · 16:9</small></span>
+      </div>
+      <div class="kh-shade" aria-hidden="true"></div>
+      <p class="hero-ask" aria-hidden="true">
+        <span class="hero-ask-row"><span>one</span><span>key.</span><span>every</span><span>door.</span></span>
+        <span class="hero-ask-row"><span>no</span><span>curfew</span><span>no</span><span>copies.</span></span>
+      </p>
+      <span class="kh-neon" aria-hidden="true"><span class="jp">鍵</span><small class="dot">KEY</small></span>
+      <h1 class="kh-title" aria-label="Get the key"><span class="kh-line"><span class="kh-in">THE KEY</span></span></h1>
+      <div class="kh-foot">
+        <p class="kh-lead">The key to the city. Forged in chrome, engraved with your name, it opens every door after midnight. Nobody has ever been asked to give one back.</p>
+        <span class="mono kh-sig">sc. 01 — get the key <span class="jp">鍵</span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 02 · THE NIGHT TEST — which district are you?
+         ═══════════════════════════════════════════════ -->
+    <section class="test" id="test">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 02 — the night test <span class="jp">夜の診断</span></p>
+        <h2 class="sec-title" data-split>Where do<br>you belong?</h2>
+        <p class="sec-lead">Six questions, no wrong answers, only wrong shoes. Six questions decide your district. Your key gets forged for it, and your room waits behind the door.</p>
+      </header>
+
+      <div class="machine" id="machine">
+        <div class="m-top dot"><span>券売機 · NIGHT TEST</span><span id="qNum">Q1 / 6</span></div>
+        <ol class="m-line" id="mLine" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li><li></li></ol>
+        <div class="m-screen" id="qScreen" aria-live="polite">
+          <p class="q-text" id="qText"></p>
+          <div class="q-opts" id="qOpts" role="group"></div>
+        </div>
+        <div class="m-foot mono"><button type="button" class="m-back" id="qBack" hidden>← back</button><span>insert yourself · no change given</span></div>
+        <div class="m-slot" aria-hidden="true"><i></i></div>
+      </div>
+
+      <div class="ticket-wrap" id="ticketWrap" hidden>
+        <article class="ticket" id="ticket">
+          <div class="t-main">
+            <p class="t-head mono"><span>ND LOOP LINE · NIGHT PASS</span><span id="tDate"></span></p>
+            <p class="t-label mono">your stop</p>
+            <p class="t-num dot" id="tNum">ND01</p>
+            <h3 class="t-dist" id="tDist" data-stretch>Silk Row</h3>
+            <p class="t-jp jp" id="tJp">絹通り</p>
+            <p class="t-why" id="tWhy"></p>
+            <div class="t-bars" id="tBars"></div>
+          </div>
+          <div class="t-side">
+            <p class="t-label mono">your room</p>
+            <div class="t-locked"><span class="jp">鍵</span><b>behind the door</b><span class="mono">forge the key to find out</span></div>
+            <div class="t-code" aria-hidden="true"></div>
+          </div>
+        </article>
+        <div class="t-ctl">
+          <a class="t-go" id="tForge" href="#forge">forge my key <i aria-hidden="true">→</i></a>
+          <a class="t-go t-go--ghost" id="tRide" href="districts.html">ride to the district <i aria-hidden="true">→</i></a>
+          <button type="button" class="t-again mono" id="tAgain">take it again</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 03 · THE FORGE — engrave it, forge it, spin it
+         ═══════════════════════════════════════════════ -->
+    <section class="forge" id="forge">
+      <form class="forge-form" id="forgeForm" autocomplete="off">
+        <p class="kicker mono">sc. 03 — the forge <span class="jp">鍛冶場</span></p>
+        <h2 class="sec-title" data-split>Engrave it.<br>Forge it.</h2>
+        <div class="field">
+          <label class="mono" for="kName">name on the key <span>(or the one you use after midnight)</span></label>
+          <input id="kName" name="name" maxlength="16" placeholder="type it in">
+        </div>
+        <div class="forge-dist" id="forgeDist" aria-live="polite">
+          <span class="mono">district on the key</span>
+          <b id="forgeDistName">not decided yet</b>
+          <a href="#test" class="mono" id="forgeDistGo">the machine decides ↑ take the test</a>
+        </div>
+        <label class="pledge"><input type="checkbox" id="kPledge"><span>I will not sleep. I will pose. I will stay shining.</span></label>
+        <button class="forge-go" id="forgeGo" type="submit"><span>forge my key</span><i aria-hidden="true">→</i></button>
+      </form>
+
+      <div class="forge-stage" id="forgeStage">
+        <div class="forge-velvet" aria-hidden="true"></div>
+        <div class="key3d key3d--big" id="forgeKey" aria-hidden="true">
+          <div class="key3d-in" id="forgeKeyIn"></div>
+          <span class="key3d-shadow"></span>
+        </div>
+        <div class="sparks" id="sparks" aria-hidden="true"></div>
+        <div class="forge-tag">
+          <span class="dot">KEY № <b id="kNo">----</b></span>
+          <span class="mono" id="kState">not forged yet · drag to spin</span>
+        </div>
+        <button class="save-key mono" id="saveKey" type="button" hidden>save your key ↓</button>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 鍵 · ONE KEY · EVERY DOOR · NO CURFEW · NO COPIES · DO NOT LOSE IT (YOU WILL) ★&nbsp;</span><span>★ 鍵 · ONE KEY · EVERY DOOR · NO CURFEW · NO COPIES · DO NOT LOSE IT (YOU WILL) ★&nbsp;</span></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 04 · THE DOOR — put the key in the lock
+         ═══════════════════════════════════════════════ -->
+    <section class="door-sec" id="door">
+      <header class="door-head">
+        <p class="kicker mono">sc. 04 — the door <span class="jp">扉</span></p>
+        <h2 class="sec-title" data-split>Now use it.</h2>
+        <p class="sec-lead" id="doorHint">Drag your key into the lock. <span class="mono red">(or press "use the key")</span></p>
+      </header>
+      <div class="door-wrap" id="doorWrap">
+        <div class="behind" id="behind">
+          <div class="room-photo"><img id="roomImg" alt=""></div>
+          <div class="behind-shade" aria-hidden="true"></div>
+          <div class="behind-in">
+            <p class="room-plate" id="roomPlate"><b id="roomNo">033</b><span id="roomHotel">Ryokan Lace</span><i class="dot" id="roomKey">KEY № 0000</i></p>
+            <h3 class="room-title">Your room.<br><span class="red">Your night.</span></h3>
+            <ol class="plan" id="plan"></ol>
+          </div>
+        </div>
+        <div class="leaf leaf--l" id="leafL"><span class="rivets" aria-hidden="true"></span><span class="leaf-no dot">ND</span></div>
+        <div class="leaf leaf--r" id="leafR"><span class="rivets" aria-hidden="true"></span><span class="leaf-no dot">0808</span></div>
+        <div class="lock" id="lock" aria-hidden="true"><i class="keyhole"></i></div>
+        <div class="mini-key" id="miniKey" role="button" tabindex="0" aria-label="Use the key">
+          <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        </div>
+      </div>
+      <div class="door-ctl">
+        <button type="button" class="use-key" id="useKey">use the key</button>
+        <button type="button" class="lock-again mono" id="lockAgain" hidden>lock it again</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ft" id="footer">
+    <!-- the end credits are a poster -->
+    <div class="ft-poster" id="ftPoster">
+      <div class="slot fill bw" data-img="img/HOME/footer.jpg" data-pos="50% 58%" data-alt="The New Detroit skyline glowing over the bay at night">
+        <span class="slot-label">footer.jpg<small>wide B&amp;W crowd / street at night · 16:9</small></span>
+      </div>
+      <div class="ft-shade" aria-hidden="true"></div>
+      <p class="ft-ask" aria-hidden="true">
+        <span class="ft-ask-row"><span>does</span><span>a city</span><span>need</span><span>a</span><span>bedtime</span></span>
+        <span class="ft-ask-row"><span>if</span><span>nobody</span><span>ever</span><span>goes home?</span></span>
+      </p>
+      <h2 class="ft-word" id="ftWord" aria-label="Stay shining"><span class="ft-word-in">STAY SHINING</span></h2>
+      <p class="ft-tag">not everyone makes it to sunrise.</p>
+    </div>
+
+    <div class="ft-bar">
+      <a href="index.html" class="ft-cta">Back to the city <i aria-hidden="true">→</i></a>
+      <div class="ft-grid">
+        <div>
+          <p class="mono ft-h">the bureau</p>
+          <p class="ft-txt">New Detroit Visitor Bureau<br>8 Chrome Heights Plaza, 88th floor<br>open 24/7 · obviously</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="mono ft-h">pages</p>
+          <a href="districts.html">Districts</a><a href="nightlife.html">Nightlife</a><a href="stay.html">Stay</a><a href="events.html">Events</a><a href="map.html">Map</a>
+        </nav>
+        <div>
+          <p class="mono ft-h">city rules</p>
+          <ol class="ft-rules">
+            <li>Blades don't lie.</li>
+            <li>Neither do heels.</li>
+            <li>Never sleep. Always pose.</li>
+            <li>Stay shining.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-sign">concept, design &amp; code by <span class="script">ghostly.grl</span> <b class="red">♥</b></p>
+      <p class="mono">© 2026 New Detroit · a city that does not exist</p>
+      <a href="#top" class="mono ft-top" data-scrollto>back to the opening shot ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b9b9b9"/>
+        <stop offset=".45" stop-color="#f5f5f2"/><stop offset=".55" stop-color="#4a4a4a"/>
+        <stop offset=".72" stop-color="#d8d8d4"/><stop offset="1" stop-color="#7a7a7a"/>
+      </linearGradient>
+      <symbol id="i-key" viewBox="0 0 64 24">
+        <circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="12" r="2.5" fill="currentColor"/>
+        <path d="M19 10.5h40v3H19z" fill="currentColor"/>
+        <path d="M50 13.5h3v6h-3zM56 13.5h3v8h-3zM44 13.5h2.5v4H44z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261009-5"></script>
+  <script src="js/key.js?v=20261009-5"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

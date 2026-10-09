@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events — NEW DETROIT</title>
+  <meta name="description" content="Pop-ups and runways in New Detroit, posted on the wall one over another. Tear them down.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,800;1,500&family=Space+Mono:wght@400;700&family=DotGothic16&family=Noto+Sans+JP:wght@900&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261009-5">
+  <link rel="stylesheet" href="css/events.css?v=20261009-5">
+</head>
+<body data-page="events">
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="hdr-logo" aria-label="New Detroit — home">
+      <span class="hdr-mark jp" aria-hidden="true">新</span>
+      <span>NEW DETROIT<small class="mono">official visitor bureau · <span class="jp">新デトロイト</span></small></span>
+    </a>
+    <nav class="hdr-nav" aria-label="Main">
+      <a href="districts.html" data-jp="地区">Districts</a><span aria-hidden="true">•</span>
+      <a href="nightlife.html" data-jp="夜遊び">Nightlife</a><span aria-hidden="true">•</span>
+      <a href="stay.html" data-jp="宿">Stay</a><span aria-hidden="true">•</span>
+      <span class="is-active" aria-current="page" data-jp="催し">Events</span><span aria-hidden="true">•</span>
+      <a href="map.html" data-jp="地図">Map</a>
+    </nav>
+    <div class="hdr-right">
+      <span class="hdr-clock mono" title="It is always 2 AM in New Detroit">ND <b id="clock">02:08:00</b></span>
+      <a href="key.html" class="key-btn" data-magnetic>
+        <span class="key-btn-br">[</span>
+        <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        Get the key
+        <span class="key-btn-br">]</span>
+      </a>
+      <button class="hdr-burger mono" id="burger" aria-label="Open menu" aria-expanded="false">menu <b>+</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-list" aria-label="Mobile">
+      <a href="districts.html"><i class="jp">地区</i>Districts</a>
+      <a href="nightlife.html"><i class="jp">夜遊び</i>Nightlife</a>
+      <a href="stay.html"><i class="jp">宿</i>Stay</a>
+      <span class="is-active" aria-current="page"><i class="jp">催し</i>Events</span>
+      <a href="map.html"><i class="jp">地図</i>Map</a>
+      <a href="key.html" class="menu-key"><i class="jp">鍵</i>[ Get the key ]</a>
+    </nav>
+    <p class="menu-foot mono">the city doesn't sleep · it poses</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 01 · TEAR IT DOWN — poster opener
+         ═══════════════════════════════════════════════ -->
+    <section class="eh" id="eh">
+      <div class="slot fill bw" data-img="img/EVENTS/hero.jpg" data-fallback="img/HOME/poster-1.jpg" data-pos="50% 30%" data-alt="A wall of posters at night">
+        <span class="slot-label">hero.jpg<small>poster wall / runway at night · 16:9</small></span>
+      </div>
+      <div class="eh-shade" aria-hidden="true"></div>
+      <p class="hero-ask" aria-hidden="true">
+        <span class="hero-ask-row"><span>posted</span><span>last night.</span><span>gone</span><span>by morning.</span></span>
+        <span class="hero-ask-row"><span>like</span><span>everything</span><span>good</span><span>here.</span></span>
+      </p>
+      <span class="eh-neon" aria-hidden="true"><span class="jp">催し</span><small class="dot">TONIGHT</small></span>
+      <h1 class="eh-title" aria-label="Events: tear it down"><span class="eh-line"><span class="eh-in">TEAR IT DOWN</span></span></h1>
+      <div class="eh-foot">
+        <p class="eh-lead">Pop-ups and runways, pasted on the wall one over another. The new ones cover the old ones. Rip a poster to see what was there before.</p>
+        <span class="mono eh-sig">sc. 01 — events <span class="jp">貼り紙</span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 02 · THE WALL — drag to tear
+         ═══════════════════════════════════════════════ -->
+    <section class="wall-sec" id="wall">
+      <header class="wall-head">
+        <div>
+          <p class="kicker mono">sc. 02 — the wall <span class="jp">壁</span></p>
+          <h2 class="sec-title sec-title--ivory" data-split>Grab a corner.<br>Pull.</h2>
+        </div>
+        <p class="wall-count mono">torn tonight: <b id="tornCount">00</b><br><span>the night crew pastes them back.</span></p>
+      </header>
+      <div class="wall" id="wallBox">
+        <div class="stack" data-stack="0"></div>
+        <div class="stack" data-stack="1"></div>
+        <div class="stack" data-stack="2"></div>
+        <div class="stack" data-stack="3"></div>
+      </div>
+      <p class="wall-hint mono" aria-hidden="true">drag to tear · click to rip · scraps stay on the wall</p>
+      <div class="tear-cursor mono" id="tearCursor" aria-hidden="true">tear ↘</div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 催し · POP-UPS · RUNWAYS · POST NO BILLS (WE DO ANYWAY) · DOORS WHENEVER · DRESS LIKE IT'S THE LAST NIGHT ★&nbsp;</span><span>★ 催し · POP-UPS · RUNWAYS · POST NO BILLS (WE DO ANYWAY) · DOORS WHENEVER · DRESS LIKE IT'S THE LAST NIGHT ★&nbsp;</span></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 03 · THE PROGRAM — every date, save it
+         ═══════════════════════════════════════════════ -->
+    <section class="program" id="program">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 03 — the program <span class="jp">予定表</span></p>
+        <h2 class="sec-title" data-split>Save the date.<br>Lose the sleep.</h2>
+        <div class="filters" role="group" aria-label="Filter events">
+          <button type="button" class="filter is-on" data-f="all">all <b>8</b></button>
+          <button type="button" class="filter" data-f="pop-up">pop-ups <b>4</b></button>
+          <button type="button" class="filter" data-f="runway">runways <b>4</b></button>
+        </div>
+      </header>
+      <ol class="ev-list" id="evList">
+          <li class="ev" id="rooftop-runway" data-slug="rooftop-runway" data-type="runway" data-date="2026-10-10" data-time="01:00" data-word="RUNWAY" data-img="img/EVENTS/rooftop-runway.jpg" data-fallback="img/HOME/poster-2.jpg">
+            <span class="ev-date"><b>10.10</b><span class="mono">sat · 01:00</span></span>
+            <span class="ev-main"><span class="ev-title">Rooftop Runway</span><span class="ev-line">A catwalk on the edge of the 88th floor. Models, wind, a DJ and the whole city as the front row.</span></span>
+            <span class="ev-where mono">Observatory 88<br><span>Chrome Heights</span></span>
+            <span class="ev-type mono">runway</span>
+            <button class="ev-cal mono" type="button" aria-label="Save Rooftop Runway to your calendar">+ cal</button>
+          </li>
+          <li class="ev" id="lantern-night" data-slug="lantern-night" data-type="runway" data-date="2026-10-11" data-time="00:00" data-word="KIMONO" data-img="img/EVENTS/lantern-night.jpg" data-fallback="img/HOME/poster-3.jpg">
+            <span class="ev-date"><b>11.10</b><span class="mono">sun · 00:00</span></span>
+            <span class="ev-main"><span class="ev-title">Lantern Night</span><span class="ev-line">A kimono runway down the narrowest alley in town. Forty bars, four hundred lanterns, one way out.</span></span>
+            <span class="ev-where mono">Lantern Alley<br><span>Lace District</span></span>
+            <span class="ev-type mono">runway</span>
+            <button class="ev-cal mono" type="button" aria-label="Save Lantern Night to your calendar">+ cal</button>
+          </li>
+          <li class="ev" id="downstairs-sale" data-slug="downstairs-sale" data-type="pop-up" data-date="2026-10-15" data-time="02:00" data-word="SALE" data-img="img/EVENTS/downstairs-sale.jpg" data-fallback="img/HOME/poster-4.jpg">
+            <span class="ev-date"><b>15.10</b><span class="mono">thu · 02:00</span></span>
+            <span class="ev-main"><span class="ev-title">Downstairs Sale</span><span class="ev-line">Sample sale at the bottom of the leopard staircase. Cash, charm, or a winning shot.</span></span>
+            <span class="ev-where mono">Downstairs<br><span>The Pool Hall</span></span>
+            <span class="ev-type mono">pop-up</span>
+            <button class="ev-cal mono" type="button" aria-label="Save Downstairs Sale to your calendar">+ cal</button>
+          </li>
+          <li class="ev" id="leopard-season" data-slug="leopard-season" data-type="pop-up" data-date="2026-10-16" data-time="23:00" data-word="POP-UP" data-img="img/EVENTS/leopard-season.jpg" data-fallback="img/HOME/poster-1.jpg">
+            <span class="ev-date"><b>16.10</b><span class="mono">fri · 23:00</span></span>
+            <span class="ev-main"><span class="ev-title">Leopard Season</span><span class="ev-line">Spots, hats, faux fur and a photographer outside. The first leopard of the season sells out by midnight.</span></span>
+            <span class="ev-where mono">Maison Charmeuse<br><span>Silk Row</span></span>
+            <span class="ev-type mono">pop-up</span>
+            <button class="ev-cal mono" type="button" aria-label="Save Leopard Season to your calendar">+ cal</button>
+          </li>
+          <li class="ev" id="boat-show" data-slug="boat-show" data-type="runway" data-date="2026-10-17" data-time="00:30" data-word="AFTER" data-img="img/EVENTS/boat-show.jpg" data-fallback="img/HOME/poster-5.jpg">
+            <span class="ev-date"><b>17.10</b><span class="mono">sat · 00:30</span></span>
+            <span class="ev-main"><span class="ev-title">The Boat Show</span><span class="ev-line">A runway on a moving boat. The show leaves at half past midnight and comes back whenever.</span></span>
+            <span class="ev-where mono">Pier 8<br><span>The Fur Coast</span></span>
+            <span class="ev-type mono">runway</span>
+            <button class="ev-cal mono" type="button" aria-label="Save The Boat Show to your calendar">+ cal</button>
+          </li>
+          <li class="ev" id="mirror-market" data-slug="mirror-market" data-type="pop-up" data-date="2026-10-18" data-time="22:00" data-word="VINTAGE" data-img="img/EVENTS/mirror-market.jpg" data-fallback="img/DISTRICTS/silk-row-1.jpg">
+            <span class="ev-date"><b>18.10</b><span class="mono">sun · 22:00</span></span>
+            <span class="ev-main"><span class="ev-title">Mirror Market</span><span class="ev-line">Vintage silk and borrowed kimonos, sold in a corridor of red mirrors. Bring your reflection, it gets a discount.</span></span>
+            <span class="ev-where mono">The Lantern Bar<br><span>Silk Row</span></span>
+            <span class="ev-type mono">pop-up</span>
+            <button class="ev-cal mono" type="button" aria-label="Save Mirror Market to your calendar">+ cal</button>
+          </li>
+          <li class="ev" id="sunrise-show" data-slug="sunrise-show" data-type="runway" data-date="2026-10-24" data-time="05:00" data-word="KOI" data-img="img/EVENTS/sunrise-show.jpg" data-fallback="img/DISTRICTS/chrome-heights-3.jpg">
+            <span class="ev-date"><b>24.10</b><span class="mono">sat · 05:00</span></span>
+            <span class="ev-main"><span class="ev-title">Koi Parade</span><span class="ev-line">A runway parade under giant paper koi. It starts at five, so the fish swim straight into the sunrise.</span></span>
+            <span class="ev-where mono">Lantern Alley<br><span>Lace District</span></span>
+            <span class="ev-type mono">runway</span>
+            <button class="ev-cal mono" type="button" aria-label="Save Koi Parade to your calendar">+ cal</button>
+          </li>
+          <li class="ev" id="first-snow" data-slug="first-snow" data-type="pop-up" data-date="2026-10-30" data-time="23:00" data-word="FAUX" data-img="img/EVENTS/first-snow.jpg" data-fallback="img/DISTRICTS/fur-coast-3.jpg">
+            <span class="ev-date"><b>30.10</b><span class="mono">fri · 23:00</span></span>
+            <span class="ev-main"><span class="ev-title">First Snow</span><span class="ev-line">Faux fur only, white boots welcome. The harbour pop-up opens with an ice sculpture in the lobby and the first snow outside.</span></span>
+            <span class="ev-where mono">Hotel Polar<br><span>The Fur Coast</span></span>
+            <span class="ev-type mono">pop-up</span>
+            <button class="ev-cal mono" type="button" aria-label="Save First Snow to your calendar">+ cal</button>
+          </li>
+      </ol>
+      <div class="ev-preview" id="evPreview" aria-hidden="true"><img alt=""></div>
+    </section>
+
+  </main>
+
+  <footer class="ft" id="footer">
+    <!-- the end credits are a poster -->
+    <div class="ft-poster" id="ftPoster">
+      <div class="slot fill bw" data-img="img/HOME/footer.jpg" data-pos="50% 58%" data-alt="The New Detroit skyline glowing over the bay at night">
+        <span class="slot-label">footer.jpg<small>wide B&amp;W crowd / street at night · 16:9</small></span>
+      </div>
+      <div class="ft-shade" aria-hidden="true"></div>
+      <p class="ft-ask" aria-hidden="true">
+        <span class="ft-ask-row"><span>does</span><span>a city</span><span>need</span><span>a</span><span>bedtime</span></span>
+        <span class="ft-ask-row"><span>if</span><span>nobody</span><span>ever</span><span>goes home?</span></span>
+      </p>
+      <h2 class="ft-word" id="ftWord" aria-label="Stay shining"><span class="ft-word-in">STAY SHINING</span></h2>
+      <p class="ft-tag">not everyone makes it to sunrise.</p>
+    </div>
+
+    <div class="ft-bar">
+      <a href="key.html" class="ft-cta">Get the key <i aria-hidden="true">→</i></a>
+      <div class="ft-grid">
+        <div>
+          <p class="mono ft-h">the bureau</p>
+          <p class="ft-txt">New Detroit Visitor Bureau<br>8 Chrome Heights Plaza, 88th floor<br>open 24/7 · obviously</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="mono ft-h">pages</p>
+          <a href="districts.html">Districts</a><a href="nightlife.html">Nightlife</a><a href="stay.html">Stay</a><span class="is-active" aria-current="page">Events</span><a href="map.html">Map</a>
+        </nav>
+        <div>
+          <p class="mono ft-h">city rules</p>
+          <ol class="ft-rules">
+            <li>Blades don't lie.</li>
+            <li>Neither do heels.</li>
+            <li>Never sleep. Always pose.</li>
+            <li>Stay shining.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-sign">concept, design &amp; code by <span class="script">ghostly.grl</span> <b class="red">♥</b></p>
+      <p class="mono">© 2026 New Detroit · a city that does not exist</p>
+      <a href="#top" class="mono ft-top" data-scrollto>back to the opening shot ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b9b9b9"/>
+        <stop offset=".45" stop-color="#f5f5f2"/><stop offset=".55" stop-color="#4a4a4a"/>
+        <stop offset=".72" stop-color="#d8d8d4"/><stop offset="1" stop-color="#7a7a7a"/>
+      </linearGradient>
+      <symbol id="i-key" viewBox="0 0 64 24">
+        <circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="12" r="2.5" fill="currentColor"/>
+        <path d="M19 10.5h40v3H19z" fill="currentColor"/>
+        <path d="M50 13.5h3v6h-3zM56 13.5h3v8h-3zM44 13.5h2.5v4H44z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261009-5"></script>
+  <script src="js/events.js?v=20261009-5"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

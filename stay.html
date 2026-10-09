@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stay — NEW DETROIT</title>
+  <meta name="description" content="Hotels, motels and a ryokan in New Detroit, with guest reviews. Sleep not included.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,800;1,500&family=Space+Mono:wght@400;700&family=DotGothic16&family=Noto+Sans+JP:wght@900&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261009-5">
+  <link rel="stylesheet" href="css/stay.css?v=20261009-5">
+</head>
+<body data-page="stay">
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="hdr-logo" aria-label="New Detroit — home">
+      <span class="hdr-mark jp" aria-hidden="true">新</span>
+      <span>NEW DETROIT<small class="mono">official visitor bureau · <span class="jp">新デトロイト</span></small></span>
+    </a>
+    <nav class="hdr-nav" aria-label="Main">
+      <a href="districts.html" data-jp="地区">Districts</a><span aria-hidden="true">•</span>
+      <a href="nightlife.html" data-jp="夜遊び">Nightlife</a><span aria-hidden="true">•</span>
+      <span class="is-active" aria-current="page" data-jp="宿">Stay</span><span aria-hidden="true">•</span>
+      <a href="events.html" data-jp="催し">Events</a><span aria-hidden="true">•</span>
+      <a href="map.html" data-jp="地図">Map</a>
+    </nav>
+    <div class="hdr-right">
+      <span class="hdr-clock mono" title="It is always 2 AM in New Detroit">ND <b id="clock">02:08:00</b></span>
+      <a href="key.html" class="key-btn" data-magnetic>
+        <span class="key-btn-br">[</span>
+        <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        Get the key
+        <span class="key-btn-br">]</span>
+      </a>
+      <button class="hdr-burger mono" id="burger" aria-label="Open menu" aria-expanded="false">menu <b>+</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-list" aria-label="Mobile">
+      <a href="districts.html"><i class="jp">地区</i>Districts</a>
+      <a href="nightlife.html"><i class="jp">夜遊び</i>Nightlife</a>
+      <span class="is-active" aria-current="page"><i class="jp">宿</i>Stay</span>
+      <a href="events.html"><i class="jp">催し</i>Events</a>
+      <a href="map.html"><i class="jp">地図</i>Map</a>
+      <a href="key.html" class="menu-key"><i class="jp">鍵</i>[ Get the key ]</a>
+    </nav>
+    <p class="menu-foot mono">the city doesn't sleep · it poses</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 01 · DO NOT DISTURB — poster opener
+         ═══════════════════════════════════════════════ -->
+    <section class="sh" id="sh">
+      <div class="slot fill bw" data-img="img/STAY/hero.jpg" data-fallback="img/HOME/local-4.jpg" data-pos="50% 40%" data-alt="Hotel towers at night">
+        <span class="slot-label">hero.jpg<small>hotel corridor / neon motel sign · 16:9</small></span>
+      </div>
+      <div class="sh-shade" aria-hidden="true"></div>
+      <p class="hero-ask" aria-hidden="true">
+        <span class="hero-ask-row"><span>check in</span><span>whenever.</span><span>check out</span><span>never.</span></span>
+        <span class="hero-ask-row"><span>sleep</span><span>is</span><span>not</span><span>included</span></span>
+      </p>
+      <span class="sh-neon" aria-hidden="true"><span class="jp">空室あり</span><small class="dot">VACANCY</small></span>
+      <h1 class="sh-title" aria-label="Stay: do not disturb"><span class="sh-line"><span class="sh-in">DO NOT DISTURB</span></span></h1>
+      <div class="sh-foot">
+        <p class="sh-lead">Hotels, motels and one ryokan for a city that doesn&#39;t sleep. The beds are mostly decorative. The reviews are all real.</p>
+        <span class="mono sh-sig">sc. 01 — stay <span class="jp">宿</span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 02 · RECEPTION — the key rack + the bell
+         ═══════════════════════════════════════════════ -->
+    <section class="desk" id="reception">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 02 — reception <span class="jp">フロント</span></p>
+        <h2 class="sec-title" data-split>Take a key.<br>Any key.</h2>
+        <p class="sec-lead">Six places to not sleep. Nobody at the desk is going to stop you. <span class="mono red">(hover the keys · ring the bell)</span></p>
+        <a href="key.html#test" class="txt-link mono test-link">not sure which room is yours? take the night test <i>→</i></a>
+        <button class="bell" id="bell" type="button" aria-label="Ring the reception bell">
+          <svg viewBox="0 0 120 80" aria-hidden="true">
+            <rect x="6" y="66" width="108" height="10" rx="3" class="bell-base"/>
+            <path d="M18 64 A42 42 0 0 1 102 64 Z" class="bell-dome"/>
+            <rect x="56" y="10" width="8" height="12" rx="2" class="bell-stem"/>
+            <rect x="48" y="4" width="24" height="8" rx="4" class="bell-btn"/>
+            <path d="M34 50 A28 28 0 0 1 50 30" class="bell-shine"/>
+          </svg>
+          <span class="mono">ring for service</span>
+        </button>
+      </header>
+      <div class="rack" id="rack">
+        <div class="rack-top dot">KEYS · 鍵 · RETURN BY NEVER</div>
+        <ol class="cubbies">
+          <li class="cubby">
+            <span class="cubby-no dot">101</span>
+            <a href="#charmeuse" class="tag" aria-label="Take the key to Hotel Charmeuse, room 101">
+              <svg class="tag-key" viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+              <span class="tag-body"><b>101</b><span>Hotel Charmeuse</span><span class="jp">絹ホテル</span></span>
+            </a>
+          </li>
+          <li class="cubby">
+            <span class="cubby-no dot">8808</span>
+            <a href="#the-88" class="tag" aria-label="Take the key to The 88, room 8808">
+              <svg class="tag-key" viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+              <span class="tag-body"><b>8808</b><span>The 88</span><span class="jp">八十八</span></span>
+            </a>
+          </li>
+          <li class="cubby">
+            <span class="cubby-no dot">033</span>
+            <a href="#capsule-lace" class="tag" aria-label="Take the key to Ryokan Lace, room 033">
+              <svg class="tag-key" viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+              <span class="tag-body"><b>033</b><span>Ryokan Lace</span><span class="jp">レース旅館</span></span>
+            </a>
+          </li>
+          <li class="cubby">
+            <span class="cubby-no dot">404</span>
+            <a href="#motel-velvet" class="tag" aria-label="Take the key to Motel Velvet, room 404">
+              <svg class="tag-key" viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+              <span class="tag-body"><b>404</b><span>Motel Velvet</span><span class="jp">ベルベット</span></span>
+            </a>
+          </li>
+          <li class="cubby">
+            <span class="cubby-no dot">007</span>
+            <a href="#champagne-motel" class="tag" aria-label="Take the key to Champagne Motel, room 007">
+              <svg class="tag-key" viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+              <span class="tag-body"><b>007</b><span>Champagne Motel</span><span class="jp">シャンパン</span></span>
+            </a>
+          </li>
+          <li class="cubby">
+            <span class="cubby-no dot">1208</span>
+            <a href="#hotel-polar" class="tag" aria-label="Take the key to Hotel Polar, room 1208">
+              <svg class="tag-key" viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+              <span class="tag-body"><b>1208</b><span>Hotel Polar</span><span class="jp">白熊ホテル</span></span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 空室あり · VACANCY · CHECK-IN 24H · CHECK-OUT NEVER · QUIET HOURS: NONE · PLEASE DO NOT DISTURB THE CITY ★&nbsp;</span><span>★ 空室あり · VACANCY · CHECK-IN 24H · CHECK-OUT NEVER · QUIET HOURS: NONE · PLEASE DO NOT DISTURB THE CITY ★&nbsp;</span></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 03 · THE ROOMS — hotels, motels, reviews
+         ═══════════════════════════════════════════════ -->
+    <section class="hotels" id="hotels">
+      <article class="hotel" id="charmeuse" data-slug="charmeuse" data-name="Hotel Charmeuse">
+        <div class="h-photos">
+          <div class="slot h-main" data-img="img/STAY/charmeuse.jpg" data-pos="50% 55%" data-ratio="4/5" data-alt="Hotel Charmeuse, Silk Row">
+            <span class="slot-label">charmeuse.jpg<small>boutique hotel, exterior or lobby · 4:5</small></span>
+          </div>
+          <div class="slot h-room" data-img="img/STAY/charmeuse-room.jpg" data-ratio="1/1" data-alt="A room at Hotel Charmeuse">
+            <span class="slot-label">charmeuse-room.jpg<small>room · 1:1</small></span>
+          </div>
+          <span class="vacancy dot" aria-hidden="true"><b>VACANCY</b></span>
+        </div>
+        <div class="h-info">
+          <p class="h-meta mono"><span class="red">boutique hotel</span> · Silk Row · room 101 · <span class="jp">絹ホテル</span></p>
+          <h2 class="h-name" data-stretch>Hotel Charmeuse</h2>
+          <p class="h-stars" aria-label="5 out of 5 stars">★★★★★<i></i></p>
+          <p class="h-line">Twelve rooms above the boutiques. Velvet curtains everywhere, a copper bar behind the arch, and a night porter who can hem a dress in four minutes.</p>
+          <div class="h-price"><span class="mono">per night</span><b>ND$ 280</b></div>
+          <ul class="h-amen"><li class="mono">silk sheets</li><li class="mono">24h tailor</li><li class="mono">copper bar</li><li class="mono">pearl minibar</li></ul>
+        </div>
+        <div class="h-book">
+          <p class="kicker mono">guestbook <span class="jp">宿帳</span></p>
+          <ol class="rv-list">
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>Checked in at 3, checked out at 3. Different days.</p><span class="mono">@silkqueen · silk row</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="4 out of 5">★★★★<i>★</i></span><p>Walked through the curtains looking for the lift. Found the bar. Stayed.</p><span class="mono">guest #0218 · out of town</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>Room service brought pearls instead of breakfast. No complaints.</p><span class="mono">anonymous · chrome heights</span></li>
+          </ol>
+          <form class="sign" autocomplete="off">
+            <p class="mono">sign the book</p>
+            <div class="sign-stars" role="radiogroup" aria-label="Your rating"><button type="button" role="radio" aria-checked="false" aria-label="1 stars" data-v="1">★</button><button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-v="2">★</button><button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-v="3">★</button><button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4">★</button><button type="button" role="radio" aria-checked="false" aria-label="5 stars" data-v="5">★</button></div>
+            <label class="sr-only" for="sign-charmeuse">Your review</label>
+            <input id="sign-charmeuse" name="text" maxlength="80" placeholder="one line. make it count.">
+            <button class="sign-go" type="submit">sign <i aria-hidden="true">→</i></button>
+          </form>
+        </div>
+      </article>
+      <article class="hotel" id="the-88" data-slug="the-88" data-name="The 88">
+        <div class="h-photos">
+          <div class="slot h-main" data-img="img/STAY/the-88.jpg" data-ratio="4/5" data-alt="The 88, Chrome Heights">
+            <span class="slot-label">the-88.jpg<small>tower hotel, exterior or lobby · 4:5</small></span>
+          </div>
+          <div class="slot h-room" data-img="img/STAY/the-88-room.jpg" data-pos="35% 50%" data-ratio="1/1" data-alt="A room at The 88">
+            <span class="slot-label">the-88-room.jpg<small>room · 1:1</small></span>
+          </div>
+          <span class="vacancy dot" aria-hidden="true"><b>VACANCY</b></span>
+        </div>
+        <div class="h-info">
+          <p class="h-meta mono"><span class="red">tower hotel</span> · Chrome Heights · room 8808 · <span class="jp">八十八</span></p>
+          <h2 class="h-name" data-stretch>The 88</h2>
+          <p class="h-stars" aria-label="4 out of 5 stars">★★★★<i>★</i></p>
+          <p class="h-line">Eighty-eight floors of glass. A lounge in the clouds with lamps like flying saucers, and bathtubs that face the giant screen across the street.</p>
+          <div class="h-price"><span class="mono">per night</span><b>ND$ 420</b></div>
+          <ul class="h-amen"><li class="mono">sky bath</li><li class="mono">cloud lounge</li><li class="mono">chrome lift</li><li class="mono">no curtains</li></ul>
+        </div>
+        <div class="h-book">
+          <p class="kicker mono">guestbook <span class="jp">宿帳</span></p>
+          <ol class="rv-list">
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>Watched myself on the giant screen from the bathtub.</p><span class="mono">@reflectionist · lace district</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="3 out of 5">★★★<i>★★</i></span><p>The elevator has opinions. Strong ones.</p><span class="mono">guest #4410 · fur coast</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="4 out of 5">★★★★<i>★</i></span><p>The view is the city. The city is the view. Sleep not included.</p><span class="mono">m. · silk row</span></li>
+          </ol>
+          <form class="sign" autocomplete="off">
+            <p class="mono">sign the book</p>
+            <div class="sign-stars" role="radiogroup" aria-label="Your rating"><button type="button" role="radio" aria-checked="false" aria-label="1 stars" data-v="1">★</button><button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-v="2">★</button><button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-v="3">★</button><button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4">★</button><button type="button" role="radio" aria-checked="false" aria-label="5 stars" data-v="5">★</button></div>
+            <label class="sr-only" for="sign-the-88">Your review</label>
+            <input id="sign-the-88" name="text" maxlength="80" placeholder="one line. make it count.">
+            <button class="sign-go" type="submit">sign <i aria-hidden="true">→</i></button>
+          </form>
+        </div>
+      </article>
+      <article class="hotel" id="capsule-lace" data-slug="capsule-lace" data-name="Ryokan Lace">
+        <div class="h-photos">
+          <div class="slot h-main" data-img="img/STAY/capsule-lace.jpg" data-pos="55% 50%" data-ratio="4/5" data-alt="Ryokan Lace, Lace District">
+            <span class="slot-label">capsule-lace.jpg<small>ryokan, exterior or lobby · 4:5</small></span>
+          </div>
+          <div class="slot h-room" data-img="img/STAY/capsule-lace-room.jpg" data-ratio="1/1" data-alt="A tatami room at Ryokan Lace">
+            <span class="slot-label">capsule-lace-room.jpg<small>room · 1:1</small></span>
+          </div>
+          <span class="vacancy dot" aria-hidden="true"><b>VACANCY</b></span>
+        </div>
+        <div class="h-info">
+          <p class="h-meta mono"><span class="red">ryokan</span> · Lace District · room 033 · <span class="jp">レース旅館</span></p>
+          <h2 class="h-name" data-stretch>Ryokan Lace</h2>
+          <p class="h-stars" aria-label="4 out of 5 stars">★★★★<i>★</i></p>
+          <p class="h-line">An inn hidden above the lantern alley. Tatami floors, a round red window that glows like the moon, and a bath on the roof that never closes.</p>
+          <div class="h-price"><span class="mono">per night</span><b>ND$ 160</b></div>
+          <ul class="h-amen"><li class="mono">tatami rooms</li><li class="mono">moon window</li><li class="mono">roof bath</li><li class="mono">yukata provided</li></ul>
+        </div>
+        <div class="h-book">
+          <p class="kicker mono">guestbook <span class="jp">宿帳</span></p>
+          <ol class="rv-list">
+              <li class="rv"><span class="rv-stars" aria-label="4 out of 5">★★★★<i>★</i></span><p>Woke up under the moon window. It was 4 AM. Again.</p><span class="mono">@pod_77 · pool hall</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="3 out of 5">★★★<i>★★</i></span><p>The yukata fits everyone. Suspicious.</p><span class="mono">guest #0033 · silk row</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>Roof bath at 5 AM, the whole city still awake below.</p><span class="mono">anonymous · lace district</span></li>
+          </ol>
+          <form class="sign" autocomplete="off">
+            <p class="mono">sign the book</p>
+            <div class="sign-stars" role="radiogroup" aria-label="Your rating"><button type="button" role="radio" aria-checked="false" aria-label="1 stars" data-v="1">★</button><button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-v="2">★</button><button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-v="3">★</button><button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4">★</button><button type="button" role="radio" aria-checked="false" aria-label="5 stars" data-v="5">★</button></div>
+            <label class="sr-only" for="sign-capsule-lace">Your review</label>
+            <input id="sign-capsule-lace" name="text" maxlength="80" placeholder="one line. make it count.">
+            <button class="sign-go" type="submit">sign <i aria-hidden="true">→</i></button>
+          </form>
+        </div>
+      </article>
+      <article class="hotel" id="motel-velvet" data-slug="motel-velvet" data-name="Motel Velvet">
+        <div class="h-photos">
+          <div class="slot h-main" data-img="img/STAY/motel-velvet.jpg" data-pos="50% 60%" data-ratio="4/5" data-alt="Motel Velvet, The Pool Hall">
+            <span class="slot-label">motel-velvet.jpg<small>motel, exterior or lobby · 4:5</small></span>
+          </div>
+          <div class="slot h-room" data-img="img/STAY/motel-velvet-room.jpg" data-ratio="1/1" data-alt="A room at Motel Velvet">
+            <span class="slot-label">motel-velvet-room.jpg<small>room · 1:1</small></span>
+          </div>
+          <span class="vacancy dot" aria-hidden="true"><b>VACANCY</b></span>
+        </div>
+        <div class="h-info">
+          <p class="h-meta mono"><span class="red">motel</span> · The Pool Hall · room 404 · <span class="jp">ベルベット</span></p>
+          <h2 class="h-name" data-stretch>Motel Velvet</h2>
+          <p class="h-stars" aria-label="4 out of 5 stars">★★★★<i>★</i></p>
+          <p class="h-line">Leopard carpet, velvet walls, and a pool table in every room. Rest by the hour or stay until someone wins.</p>
+          <div class="h-price"><span class="mono">per night</span><b>ND$ 120</b><span class="price-rest">rest ND$ 45 · 2h</span></div>
+          <ul class="h-amen"><li class="mono">pool table in room</li><li class="mono">leopard everything</li><li class="mono">rest by the hour</li><li class="mono">mirror ceiling</li></ul>
+        </div>
+        <div class="h-book">
+          <p class="kicker mono">guestbook <span class="jp">宿帳</span></p>
+          <ol class="rv-list">
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>Pool table in the room. Lost to my own reflection.</p><span class="mono">@cueball · chrome heights</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="4 out of 5">★★★★<i>★</i></span><p>Leopard carpet. Leopard sheets. Leopard everything.</p><span class="mono">guest #0404 · fur coast</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="3 out of 5">★★★<i>★★</i></span><p>The 2-hour rest became a 2-day rest.</p><span class="mono">v. · pool hall</span></li>
+          </ol>
+          <form class="sign" autocomplete="off">
+            <p class="mono">sign the book</p>
+            <div class="sign-stars" role="radiogroup" aria-label="Your rating"><button type="button" role="radio" aria-checked="false" aria-label="1 stars" data-v="1">★</button><button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-v="2">★</button><button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-v="3">★</button><button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4">★</button><button type="button" role="radio" aria-checked="false" aria-label="5 stars" data-v="5">★</button></div>
+            <label class="sr-only" for="sign-motel-velvet">Your review</label>
+            <input id="sign-motel-velvet" name="text" maxlength="80" placeholder="one line. make it count.">
+            <button class="sign-go" type="submit">sign <i aria-hidden="true">→</i></button>
+          </form>
+        </div>
+      </article>
+      <article class="hotel" id="champagne-motel" data-slug="champagne-motel" data-name="Champagne Motel">
+        <div class="h-photos">
+          <div class="slot h-main" data-img="img/STAY/champagne-motel.jpg" data-fallback="img/DISTRICTS/fur-coast-2.jpg" data-ratio="4/5" data-alt="Champagne Motel, The Fur Coast">
+            <span class="slot-label">champagne-motel.jpg<small>motel, exterior or lobby · 4:5</small></span>
+          </div>
+          <div class="slot h-room" data-img="img/STAY/champagne-motel-room.jpg" data-pos="55% 55%" data-ratio="1/1" data-alt="A room at Champagne Motel">
+            <span class="slot-label">champagne-motel-room.jpg<small>room · 1:1</small></span>
+          </div>
+          <span class="vacancy dot" aria-hidden="true"><b>VACANCY</b></span>
+        </div>
+        <div class="h-info">
+          <p class="h-meta mono"><span class="red">motel</span> · The Fur Coast · room 007 · <span class="jp">シャンパン</span></p>
+          <h2 class="h-name" data-stretch>Champagne Motel</h2>
+          <p class="h-stars" aria-label="3 out of 5 stars">★★★<i>★★</i></p>
+          <p class="h-line">Famous for the bar downstairs, infamous for the rooms upstairs. That photo of the red bed is the only one anyone has ever taken. The rest is rumour.</p>
+          <div class="h-price"><span class="mono">per night</span><b>ND$ 99</b><span class="price-rest">rest ND$ 40 · 2h</span></div>
+          <ul class="h-amen"><li class="mono">bar never closes</li><li class="mono">cherry blossom lobby</li><li class="mono">one (1) photographed room</li><li class="mono">late checkout: always</li></ul>
+        </div>
+        <div class="h-book">
+          <p class="kicker mono">guestbook <span class="jp">宿帳</span></p>
+          <ol class="rv-list">
+              <li class="rv"><span class="rv-stars" aria-label="3 out of 5">★★★<i>★★</i></span><p>Found the bar. Never found the room.</p><span class="mono">@lost_in_7 · silk row</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>The rooms are real. I've seen one. I think.</p><span class="mono">guest #0007 · lace district</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="4 out of 5">★★★★<i>★</i></span><p>Cherry blossoms in the lobby, champagne in the sink.</p><span class="mono">anonymous · chrome heights</span></li>
+          </ol>
+          <form class="sign" autocomplete="off">
+            <p class="mono">sign the book</p>
+            <div class="sign-stars" role="radiogroup" aria-label="Your rating"><button type="button" role="radio" aria-checked="false" aria-label="1 stars" data-v="1">★</button><button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-v="2">★</button><button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-v="3">★</button><button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4">★</button><button type="button" role="radio" aria-checked="false" aria-label="5 stars" data-v="5">★</button></div>
+            <label class="sr-only" for="sign-champagne-motel">Your review</label>
+            <input id="sign-champagne-motel" name="text" maxlength="80" placeholder="one line. make it count.">
+            <button class="sign-go" type="submit">sign <i aria-hidden="true">→</i></button>
+          </form>
+        </div>
+      </article>
+      <article class="hotel" id="hotel-polar" data-slug="hotel-polar" data-name="Hotel Polar">
+        <div class="h-photos">
+          <div class="slot h-main" data-img="img/STAY/hotel-polar.jpg" data-pos="50% 45%" data-ratio="4/5" data-alt="Hotel Polar, The Fur Coast">
+            <span class="slot-label">hotel-polar.jpg<small>harbour hotel, exterior or lobby · 4:5</small></span>
+          </div>
+          <div class="slot h-room" data-img="img/STAY/hotel-polar-room.jpg" data-ratio="1/1" data-alt="A room at Hotel Polar">
+            <span class="slot-label">hotel-polar-room.jpg<small>room · 1:1</small></span>
+          </div>
+          <span class="vacancy dot" aria-hidden="true"><b>VACANCY</b></span>
+        </div>
+        <div class="h-info">
+          <p class="h-meta mono"><span class="red">harbour hotel</span> · The Fur Coast · room 1208 · <span class="jp">白熊ホテル</span></p>
+          <h2 class="h-name" data-stretch>Hotel Polar</h2>
+          <p class="h-stars" aria-label="5 out of 5 stars">★★★★★<i></i></p>
+          <p class="h-line">A black lobby, white rooms, and a martini on the pillow instead of a chocolate. The boat party picks you up from the balcony.</p>
+          <div class="h-price"><span class="mono">per night</span><b>ND$ 350</b></div>
+          <ul class="h-amen"><li class="mono">fur throws</li><li class="mono">martini turndown</li><li class="mono">harbour balcony</li><li class="mono">boat pick-up</li></ul>
+        </div>
+        <div class="h-book">
+          <p class="kicker mono">guestbook <span class="jp">宿帳</span></p>
+          <ol class="rv-list">
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>Martini on the pillow. Never going back to chocolates.</p><span class="mono">@whiteout · pool hall</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="4 out of 5">★★★★<i>★</i></span><p>Room was freezing. On purpose. Loved it.</p><span class="mono">guest #1208 · silk row</span></li>
+              <li class="rv"><span class="rv-stars" aria-label="5 out of 5">★★★★★<i></i></span><p>The boat party picked me up from the balcony.</p><span class="mono">n. · fur coast</span></li>
+          </ol>
+          <form class="sign" autocomplete="off">
+            <p class="mono">sign the book</p>
+            <div class="sign-stars" role="radiogroup" aria-label="Your rating"><button type="button" role="radio" aria-checked="false" aria-label="1 stars" data-v="1">★</button><button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-v="2">★</button><button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-v="3">★</button><button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4">★</button><button type="button" role="radio" aria-checked="false" aria-label="5 stars" data-v="5">★</button></div>
+            <label class="sr-only" for="sign-hotel-polar">Your review</label>
+            <input id="sign-hotel-polar" name="text" maxlength="80" placeholder="one line. make it count.">
+            <button class="sign-go" type="submit">sign <i aria-hidden="true">→</i></button>
+          </form>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="ft" id="footer">
+    <!-- the end credits are a poster -->
+    <div class="ft-poster" id="ftPoster">
+      <div class="slot fill bw" data-img="img/HOME/footer.jpg" data-pos="50% 58%" data-alt="The New Detroit skyline glowing over the bay at night">
+        <span class="slot-label">footer.jpg<small>wide B&amp;W crowd / street at night · 16:9</small></span>
+      </div>
+      <div class="ft-shade" aria-hidden="true"></div>
+      <p class="ft-ask" aria-hidden="true">
+        <span class="ft-ask-row"><span>does</span><span>a city</span><span>need</span><span>a</span><span>bedtime</span></span>
+        <span class="ft-ask-row"><span>if</span><span>nobody</span><span>ever</span><span>goes home?</span></span>
+      </p>
+      <h2 class="ft-word" id="ftWord" aria-label="Stay shining"><span class="ft-word-in">STAY SHINING</span></h2>
+      <p class="ft-tag">not everyone makes it to sunrise.</p>
+    </div>
+
+    <div class="ft-bar">
+      <a href="key.html" class="ft-cta">Get the key <i aria-hidden="true">→</i></a>
+      <div class="ft-grid">
+        <div>
+          <p class="mono ft-h">the bureau</p>
+          <p class="ft-txt">New Detroit Visitor Bureau<br>8 Chrome Heights Plaza, 88th floor<br>open 24/7 · obviously</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="mono ft-h">pages</p>
+          <a href="districts.html">Districts</a><a href="nightlife.html">Nightlife</a><span class="is-active" aria-current="page">Stay</span><a href="events.html">Events</a><a href="map.html">Map</a>
+        </nav>
+        <div>
+          <p class="mono ft-h">city rules</p>
+          <ol class="ft-rules">
+            <li>Blades don't lie.</li>
+            <li>Neither do heels.</li>
+            <li>Never sleep. Always pose.</li>
+            <li>Stay shining.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-sign">concept, design &amp; code by <span class="script">ghostly.grl</span> <b class="red">♥</b></p>
+      <p class="mono">© 2026 New Detroit · a city that does not exist</p>
+      <a href="#top" class="mono ft-top" data-scrollto>back to the opening shot ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b9b9b9"/>
+        <stop offset=".45" stop-color="#f5f5f2"/><stop offset=".55" stop-color="#4a4a4a"/>
+        <stop offset=".72" stop-color="#d8d8d4"/><stop offset="1" stop-color="#7a7a7a"/>
+      </linearGradient>
+      <symbol id="i-key" viewBox="0 0 64 24">
+        <circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="12" r="2.5" fill="currentColor"/>
+        <path d="M19 10.5h40v3H19z" fill="currentColor"/>
+        <path d="M50 13.5h3v6h-3zM56 13.5h3v8h-3zM44 13.5h2.5v4H44z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261009-5"></script>
+  <script src="js/stay.js?v=20261009-5"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

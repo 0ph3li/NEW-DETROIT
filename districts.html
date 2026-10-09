@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Districts — NEW DETROIT</title>
+  <meta name="description" content="Five districts on one loop line: Silk Row, Chrome Heights, Lace District, The Pool Hall and The Fur Coast.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,800;1,500&family=Space+Mono:wght@400;700&family=DotGothic16&family=Noto+Sans+JP:wght@900&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261009-5">
+  <link rel="stylesheet" href="css/districts.css?v=20261009-5">
+</head>
+<body data-page="districts">
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="hdr-logo" aria-label="New Detroit — home">
+      <span class="hdr-mark jp" aria-hidden="true">新</span>
+      <span>NEW DETROIT<small class="mono">official visitor bureau · <span class="jp">新デトロイト</span></small></span>
+    </a>
+    <nav class="hdr-nav" aria-label="Main">
+      <span class="is-active" aria-current="page" data-jp="地区">Districts</span><span aria-hidden="true">•</span>
+      <a href="nightlife.html" data-jp="夜遊び">Nightlife</a><span aria-hidden="true">•</span>
+      <a href="stay.html" data-jp="宿">Stay</a><span aria-hidden="true">•</span>
+      <a href="events.html" data-jp="催し">Events</a><span aria-hidden="true">•</span>
+      <a href="map.html" data-jp="地図">Map</a>
+    </nav>
+    <div class="hdr-right">
+      <span class="hdr-clock mono" title="It is always 2 AM in New Detroit">ND <b id="clock">02:08:00</b></span>
+      <a href="key.html" class="key-btn" data-magnetic>
+        <span class="key-btn-br">[</span>
+        <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        Get the key
+        <span class="key-btn-br">]</span>
+      </a>
+      <button class="hdr-burger mono" id="burger" aria-label="Open menu" aria-expanded="false">menu <b>+</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-list" aria-label="Mobile">
+      <span class="is-active" aria-current="page"><i class="jp">地区</i>Districts</span>
+      <a href="nightlife.html"><i class="jp">夜遊び</i>Nightlife</a>
+      <a href="stay.html"><i class="jp">宿</i>Stay</a>
+      <a href="events.html"><i class="jp">催し</i>Events</a>
+      <a href="map.html"><i class="jp">地図</i>Map</a>
+      <a href="key.html" class="menu-key"><i class="jp">鍵</i>[ Get the key ]</a>
+    </nav>
+    <p class="menu-foot mono">the city doesn't sleep · it poses</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 01 · FIVE STOPS — poster opener
+         ═══════════════════════════════════════════════ -->
+    <section class="dh" id="dh">
+      <div class="slot fill bw" data-img="img/DISTRICTS/hero.jpg" data-fallback="img/HOME/local-3.jpg" data-pos="50% 60%" data-alt="Neon signs over the scramble crossing">
+        <span class="slot-label">hero.jpg<small>wide street / station at night · 16:9</small></span>
+      </div>
+      <div class="dh-shade" aria-hidden="true"></div>
+      <p class="hero-ask" aria-hidden="true">
+        <span class="hero-ask-row"><span>one</span><span>loop line</span><span>five</span><span>stops</span></span>
+        <span class="hero-ask-row"><span>no</span><span>last</span><span>train</span><span>ever</span></span>
+      </p>
+      <h1 class="dh-title" aria-label="Districts: five stops">
+        <span class="dh-line"><span class="dh-in">FIVE STOPS</span></span>
+      </h1>
+      <div class="dh-foot">
+        <p class="dh-lead">New Detroit runs on a single loop line. Five stations, five districts, five fabrics. The trains never stop running, so neither do you.</p>
+        <span class="dh-sig mono">sc. 01 — the line <span class="jp">環状線</span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 02 · THE LOOP LINE — interactive line map
+         ═══════════════════════════════════════════════ -->
+    <section class="map-sec" id="loop-line">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 02 — the loop line <span class="jp">路線図</span></p>
+        <h2 class="sec-title" data-split>Pick a stop.</h2>
+        <p class="sec-lead">Hover a station to look out of the window. Click to ride there. <span class="mono red">(the train is real. kind of.)</span></p>
+        <a href="key.html#test" class="txt-link mono test-link">not sure where you belong? take the night test <i>→</i></a>
+      </header>
+      <div class="loop" id="loop">
+        <svg class="loop-svg" id="loopSvg" viewBox="0 0 1000 600" role="img" aria-label="Loop line map with five stations"></svg>
+        <div class="loop-window" id="loopWindow" aria-hidden="true">
+          <div class="slot fill" data-img="img/HOME/silk-row.jpg" data-pos="52% 50%" data-win="silk-row"></div>
+          <div class="slot fill" data-img="img/HOME/chrome-heights.jpg" data-pos="50% 60%" data-win="chrome-heights"></div>
+          <div class="slot fill" data-img="img/HOME/lace-district.jpg" data-pos="38% 50%" data-win="lace-district"></div>
+          <div class="slot fill" data-img="img/HOME/pool-hall.jpg" data-pos="50% 75%" data-win="pool-hall"></div>
+          <div class="slot fill" data-img="img/HOME/fur-coast.jpg" data-pos="50% 62%" data-win="fur-coast"></div>
+          <div class="loop-window-label"><span class="dot" id="loopNow">ND · LOOP LINE</span><b id="loopName">choose a stop</b></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 次は 絹通り · NEXT STATION: SILK ROW · ND01 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span><span>★ 次は 絹通り · NEXT STATION: SILK ROW · ND01 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span></div>
+    </div>
+
+    <!-- ═══ ND01 · SILK ROW ═══ -->
+    <section class="dc" id="silk-row" data-num="01" aria-labelledby="t-silk-row">
+      <div class="dc-poster">
+        <div class="slot fill bw" data-img="img/HOME/silk-row.jpg" data-pos="52% 50%" data-alt="Silk Row at night">
+          <span class="slot-label">silk-row.jpg<small>district photo</small></span>
+        </div>
+        <div class="dc-shade" aria-hidden="true"></div>
+        <div class="sw-sign dc-sign">
+          <span class="sw-num">ND<b>01</b></span>
+          <span class="sw-names"><span class="jp sw-jp">絹通り</span><span class="sw-name">Silk Row</span></span>
+          <span class="sw-way mono"><a href="#fur-coast" data-scrollto>← the fur coast</a><a href="#chrome-heights" data-scrollto>chrome heights →</a></span>
+        </div>
+        <span class="dc-neon jp" aria-hidden="true">絹通り</span>
+        <h2 class="dc-name" id="t-silk-row" aria-label="Silk Row"><span class="dc-name-in">SILK ROW</span></h2>
+      </div>
+
+      <div class="dc-body">
+        <div class="dc-intro">
+          <div class="dc-swatch tex-silk" aria-hidden="true"><span class="mono">fabric: silk · charmeuse</span></div>
+          <p class="dc-lead">Old money, new mirrors. A boulevard of boutiques that never pull the shutters down, where every shop window doubles as a dressing room and the pavement is polished for reflections.</p>
+          <dl class="dc-facts">
+            <div><dt class="mono">dress for it</dt><dd>bias-cut slip, borrowed pearls</dd></div>
+            <div><dt class="mono">best after</dt><dd>11 PM</dd></div>
+            <div><dt class="mono">get off at</dt><dd>exit 8 · the mirror arcade</dd></div>
+          </dl>
+        </div>
+        <p class="kicker mono dc-kicker">known for <span class="jp">名所</span></p>
+        <ol class="dc-spots">
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/silk-row-1.jpg" data-ratio="4/5" data-alt="Maison Charmeuse, Silk Row">
+              <span class="slot-label">silk-row-1.jpg<small>boutique · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">boutique</span>
+            <h3 class="spot-name">Maison Charmeuse</h3>
+            <p class="spot-line">Vintage silk kimonos on one rail. Fittings by appointment, appointments at 3 AM.</p>
+            <span class="spot-hours dot">20:00 — 04:00</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/silk-row-2.jpg" data-ratio="4/5" data-alt="The Lantern Bar, Silk Row">
+              <span class="slot-label">silk-row-2.jpg<small>bar · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">bar</span>
+            <h3 class="spot-name">The Lantern Bar</h3>
+            <p class="spot-line">One giant red lantern, forty regulars, no last orders.</p>
+            <span class="spot-hours dot">22:00 — 06:00</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/silk-row-3.jpg" data-pos="45% 50%" data-ratio="4/5" data-alt="Pearl Pawn 24, Silk Row">
+              <span class="slot-label">silk-row-3.jpg<small>pawn shop · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">pawn shop</span>
+            <h3 class="spot-name">Pearl Pawn 24</h3>
+            <p class="spot-line">Lucky cats, stopped clocks, pearls with a past. Trade a necklace for a story.</p>
+            <span class="spot-hours dot">24 / 7</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 次は クロム丘 · NEXT STATION: CHROME HEIGHTS · ND02 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span><span>★ 次は クロム丘 · NEXT STATION: CHROME HEIGHTS · ND02 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span></div>
+    </div>
+
+    <!-- ═══ ND02 · CHROME HEIGHTS ═══ -->
+    <section class="dc" id="chrome-heights" data-num="02" aria-labelledby="t-chrome-heights">
+      <div class="dc-poster">
+        <div class="slot fill bw" data-img="img/HOME/chrome-heights.jpg" data-pos="50% 60%" data-alt="Chrome Heights at night">
+          <span class="slot-label">chrome-heights.jpg<small>district photo</small></span>
+        </div>
+        <div class="dc-shade" aria-hidden="true"></div>
+        <div class="sw-sign dc-sign">
+          <span class="sw-num">ND<b>02</b></span>
+          <span class="sw-names"><span class="jp sw-jp">クロム丘</span><span class="sw-name">Chrome Heights</span></span>
+          <span class="sw-way mono"><a href="#silk-row" data-scrollto>← silk row</a><a href="#lace-district" data-scrollto>lace district →</a></span>
+        </div>
+        <span class="dc-neon jp" aria-hidden="true">クロム丘</span>
+        <h2 class="dc-name" id="t-chrome-heights" aria-label="Chrome Heights"><span class="dc-name-in">CHROME HEIGHTS</span></h2>
+      </div>
+
+      <div class="dc-body">
+        <div class="dc-intro">
+          <div class="dc-swatch tex-chrome" aria-hidden="true"><span class="mono">fabric: chrome · liquid metal</span></div>
+          <p class="dc-lead">Towers polished twice a night and screens forty storeys tall. Up here the city looks like a circuit board, and everyone has a window seat.</p>
+          <dl class="dc-facts">
+            <div><dt class="mono">dress for it</dt><dd>mirror shades, nothing matte</dd></div>
+            <div><dt class="mono">best after</dt><dd>1 AM</dd></div>
+            <div><dt class="mono">get off at</dt><dd>exit 88 · sky lobby</dd></div>
+          </dl>
+        </div>
+        <p class="kicker mono dc-kicker">known for <span class="jp">名所</span></p>
+        <ol class="dc-spots">
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/chrome-heights-1.jpg" data-pos="30% 50%" data-ratio="4/5" data-alt="Observatory 88, Chrome Heights">
+              <span class="slot-label">chrome-heights-1.jpg<small>rooftop · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">rooftop</span>
+            <h3 class="spot-name">Observatory 88</h3>
+            <p class="spot-line">The best view of the city, and of whoever is next to you.</p>
+            <span class="spot-hours dot">21:00 — 05:00</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/chrome-heights-2.jpg" data-ratio="4/5" data-alt="ND Vision, Chrome Heights">
+              <span class="slot-label">chrome-heights-2.jpg<small>plaza · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">plaza</span>
+            <h3 class="spot-name">ND Vision</h3>
+            <p class="spot-line">The scramble, seen from the sky lobby. Stand under the screen long enough and you'll be on it.</p>
+            <span class="spot-hours dot">24 / 7</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/chrome-heights-3.jpg" data-ratio="4/5" data-alt="Chrome Chapel, Chrome Heights">
+              <span class="slot-label">chrome-heights-3.jpg<small>club · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">club</span>
+            <h3 class="spot-name">Chrome Chapel</h3>
+            <p class="spot-line">A red vault, a DJ altar, a congregation that only leaves at sunrise.</p>
+            <span class="spot-hours dot">01:00 — sunrise</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 次は レース街 · NEXT STATION: LACE DISTRICT · ND03 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span><span>★ 次は レース街 · NEXT STATION: LACE DISTRICT · ND03 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span></div>
+    </div>
+
+    <!-- ═══ ND03 · LACE DISTRICT ═══ -->
+    <section class="dc" id="lace-district" data-num="03" aria-labelledby="t-lace-district">
+      <div class="dc-poster">
+        <div class="slot fill bw" data-img="img/HOME/lace-district.jpg" data-pos="38% 50%" data-alt="Lace District at night">
+          <span class="slot-label">lace-district.jpg<small>district photo</small></span>
+        </div>
+        <div class="dc-shade" aria-hidden="true"></div>
+        <div class="sw-sign dc-sign">
+          <span class="sw-num">ND<b>03</b></span>
+          <span class="sw-names"><span class="jp sw-jp">レース街</span><span class="sw-name">Lace District</span></span>
+          <span class="sw-way mono"><a href="#chrome-heights" data-scrollto>← chrome heights</a><a href="#pool-hall" data-scrollto>the pool hall →</a></span>
+        </div>
+        <span class="dc-neon jp" aria-hidden="true">レース街</span>
+        <h2 class="dc-name" id="t-lace-district" aria-label="Lace District"><span class="dc-name-in">LACE DISTRICT</span></h2>
+      </div>
+
+      <div class="dc-body">
+        <div class="dc-intro">
+          <div class="dc-swatch tex-lace" aria-hidden="true"><span class="mono">fabric: chantilly lace</span></div>
+          <p class="dc-lead">Narrow alleys stitched together with paper lanterns. Tiny bars with six stools, late ateliers, silhouettes behind frosted glass. Nothing here is see-through by accident.</p>
+          <dl class="dc-facts">
+            <div><dt class="mono">dress for it</dt><dd>black lace, one red thing</dd></div>
+            <div><dt class="mono">best after</dt><dd>midnight</dd></div>
+            <div><dt class="mono">get off at</dt><dd>exit 3 · lantern alley</dd></div>
+          </dl>
+        </div>
+        <p class="kicker mono dc-kicker">known for <span class="jp">名所</span></p>
+        <ol class="dc-spots">
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/lace-district-1.jpg" data-pos="45% 50%" data-ratio="4/5" data-alt="Lantern Alley, Lace District">
+              <span class="slot-label">lace-district-1.jpg<small>alley · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">alley</span>
+            <h3 class="spot-name">Lantern Alley</h3>
+            <p class="spot-line">Forty bars in one alley. You will not make it to the end.</p>
+            <span class="spot-hours dot">19:00 — 05:00</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/lace-district-2.jpg" data-pos="50% 45%" data-ratio="4/5" data-alt="Atelier Noir, Lace District">
+              <span class="slot-label">lace-district-2.jpg<small>atelier · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">atelier</span>
+            <h3 class="spot-name">Atelier Noir</h3>
+            <p class="spot-line">Leather jackets, glass cases, one orange lamp. A tailor who only works by lamplight.</p>
+            <span class="spot-hours dot">00:00 — 04:00</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/lace-district-3.jpg" data-ratio="4/5" data-alt="Velvet 8, Lace District">
+              <span class="slot-label">lace-district-3.jpg<small>bar · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">bar</span>
+            <h3 class="spot-name">Velvet 8</h3>
+            <p class="spot-line">Paper parasols for lamps, low red sofas, the whole city through the glass.</p>
+            <span class="spot-hours dot">23:00 — 06:00</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 次は 玉突き場 · NEXT STATION: THE POOL HALL · ND04 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span><span>★ 次は 玉突き場 · NEXT STATION: THE POOL HALL · ND04 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span></div>
+    </div>
+
+    <!-- ═══ ND04 · THE POOL HALL ═══ -->
+    <section class="dc" id="pool-hall" data-num="04" aria-labelledby="t-pool-hall">
+      <div class="dc-poster">
+        <div class="slot fill bw" data-img="img/HOME/pool-hall.jpg" data-pos="50% 75%" data-alt="The Pool Hall at night">
+          <span class="slot-label">pool-hall.jpg<small>district photo</small></span>
+        </div>
+        <div class="dc-shade" aria-hidden="true"></div>
+        <div class="sw-sign dc-sign">
+          <span class="sw-num">ND<b>04</b></span>
+          <span class="sw-names"><span class="jp sw-jp">玉突き場</span><span class="sw-name">The Pool Hall</span></span>
+          <span class="sw-way mono"><a href="#lace-district" data-scrollto>← lace district</a><a href="#fur-coast" data-scrollto>the fur coast →</a></span>
+        </div>
+        <span class="dc-neon jp" aria-hidden="true">玉突き場</span>
+        <h2 class="dc-name" id="t-pool-hall" aria-label="The Pool Hall"><span class="dc-name-in">THE POOL HALL</span></h2>
+      </div>
+
+      <div class="dc-body">
+        <div class="dc-intro">
+          <div class="dc-swatch tex-velvet" aria-hidden="true"><span class="mono">fabric: crushed velvet · felt</span></div>
+          <p class="dc-lead">Where the tables glow under diamond lights and every deal smells like champagne. Leopard felt, low ceilings, quiet hands. Call your pocket before you take the shot.</p>
+          <dl class="dc-facts">
+            <div><dt class="mono">dress for it</dt><dd>velvet blazer, steady hands</dd></div>
+            <div><dt class="mono">best after</dt><dd>2 AM</dd></div>
+            <div><dt class="mono">get off at</dt><dd>exit 4 · downstairs</dd></div>
+          </dl>
+        </div>
+        <p class="kicker mono dc-kicker">known for <span class="jp">名所</span></p>
+        <ol class="dc-spots">
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/pool-hall-1.jpg" data-pos="50% 62%" data-ratio="4/5" data-alt="The Cue Club, The Pool Hall">
+              <span class="slot-label">pool-hall-1.jpg<small>pool · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">pool</span>
+            <h3 class="spot-name">The Cue Club</h3>
+            <p class="spot-line">Leopard felt and a house rule: whoever loses buys the next round.</p>
+            <span class="spot-hours dot">21:00 — till you lose</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/pool-hall-2.jpg" data-ratio="4/5" data-alt="Downstairs, The Pool Hall">
+              <span class="slot-label">pool-hall-2.jpg<small>club · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">club</span>
+            <h3 class="spot-name">Downstairs</h3>
+            <p class="spot-line">A spiral staircase in leopard print. The party is at the bottom.</p>
+            <span class="spot-hours dot">23:00 — 07:00</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/pool-hall-3.jpg" data-pos="50% 60%" data-ratio="4/5" data-alt="The Tiger Bar, The Pool Hall">
+              <span class="slot-label">pool-hall-3.jpg<small>bar · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">bar</span>
+            <h3 class="spot-name">The Tiger Bar</h3>
+            <p class="spot-line">A tiger on the wall, two coupes on the bar, nobody keeping count.</p>
+            <span class="spot-hours dot">20:00 — 05:00</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 次は 毛皮海岸 · NEXT STATION: THE FUR COAST · ND05 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span><span>★ 次は 毛皮海岸 · NEXT STATION: THE FUR COAST · ND05 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span></div>
+    </div>
+
+    <!-- ═══ ND05 · THE FUR COAST ═══ -->
+    <section class="dc" id="fur-coast" data-num="05" aria-labelledby="t-fur-coast">
+      <div class="dc-poster">
+        <div class="slot fill bw" data-img="img/HOME/fur-coast.jpg" data-pos="50% 62%" data-alt="The Fur Coast at night">
+          <span class="slot-label">fur-coast.jpg<small>district photo</small></span>
+        </div>
+        <div class="dc-shade" aria-hidden="true"></div>
+        <div class="sw-sign dc-sign">
+          <span class="sw-num">ND<b>05</b></span>
+          <span class="sw-names"><span class="jp sw-jp">毛皮海岸</span><span class="sw-name">The Fur Coast</span></span>
+          <span class="sw-way mono"><a href="#pool-hall" data-scrollto>← the pool hall</a><a href="#silk-row" data-scrollto>silk row →</a></span>
+        </div>
+        <span class="dc-neon jp" aria-hidden="true">毛皮海岸</span>
+        <h2 class="dc-name" id="t-fur-coast" aria-label="The Fur Coast"><span class="dc-name-in">THE FUR COAST</span></h2>
+      </div>
+
+      <div class="dc-body">
+        <div class="dc-intro">
+          <div class="dc-swatch tex-leopard" aria-hidden="true"><span class="mono">fabric: snow leopard (faux, darling)</span></div>
+          <p class="dc-lead">The frozen waterfront where the coats come out. Boat parties until the harbour turns pink, and a skyline that stays lit just to look good in the water.</p>
+          <dl class="dc-facts">
+            <div><dt class="mono">dress for it</dt><dd>faux fur, white boots</dd></div>
+            <div><dt class="mono">best after</dt><dd>first snow</dd></div>
+            <div><dt class="mono">get off at</dt><dd>exit 5 · pier 8</dd></div>
+          </dl>
+        </div>
+        <p class="kicker mono dc-kicker">known for <span class="jp">名所</span></p>
+        <ol class="dc-spots">
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/fur-coast-1.jpg" data-ratio="4/5" data-alt="Pier 8, The Fur Coast">
+              <span class="slot-label">fur-coast-1.jpg<small>boat · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">boat</span>
+            <h3 class="spot-name">Pier 8</h3>
+            <p class="spot-line">Boat parties that leave at midnight and come back whenever.</p>
+            <span class="spot-hours dot">00:00 — dawn</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/fur-coast-2.jpg" data-ratio="4/5" data-alt="Champagne Motel, The Fur Coast">
+              <span class="slot-label">fur-coast-2.jpg<small>bar · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">bar</span>
+            <h3 class="spot-name">Champagne Motel</h3>
+            <p class="spot-line">Cherry blossoms that never fall, a bar that never closes. The rooms are a rumour.</p>
+            <span class="spot-hours dot">24 / 7</span>
+          </li>
+          <li class="spot">
+            <div class="slot spot-ph" data-img="img/DISTRICTS/fur-coast-3.jpg" data-pos="60% 50%" data-ratio="4/5" data-alt="The Frozen Bench, The Fur Coast">
+              <span class="slot-label">fur-coast-3.jpg<small>lookout · 4:5</small></span>
+            </div>
+            <span class="spot-type mono">lookout</span>
+            <h3 class="spot-name">The Frozen Bench</h3>
+            <p class="spot-line">The harbour, the skyline, nobody talking. Bring someone warm.</p>
+            <span class="spot-hours dot">always</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 次は 絹通り · NEXT STATION: SILK ROW · ND01 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span><span>★ 次は 絹通り · NEXT STATION: SILK ROW · ND01 · DOORS OPEN ON THE LEFT ★ PLEASE MIND THE HEELS&nbsp;</span></div>
+    </div>
+
+  </main>
+
+  <!-- route display: where you are on the line -->
+  <nav class="rail" id="rail" aria-label="Districts on the line"><a href="#silk-row" data-scrollto data-for="silk-row"><b>ND01</b><span>Silk Row</span></a><a href="#chrome-heights" data-scrollto data-for="chrome-heights"><b>ND02</b><span>Chrome Heights</span></a><a href="#lace-district" data-scrollto data-for="lace-district"><b>ND03</b><span>Lace District</span></a><a href="#pool-hall" data-scrollto data-for="pool-hall"><b>ND04</b><span>The Pool Hall</span></a><a href="#fur-coast" data-scrollto data-for="fur-coast"><b>ND05</b><span>The Fur Coast</span></a></nav>
+
+  <footer class="ft" id="footer">
+    <!-- the end credits are a poster -->
+    <div class="ft-poster" id="ftPoster">
+      <div class="slot fill bw" data-img="img/HOME/footer.jpg" data-pos="50% 58%" data-alt="The New Detroit skyline glowing over the bay at night">
+        <span class="slot-label">footer.jpg<small>wide B&amp;W crowd / street at night · 16:9</small></span>
+      </div>
+      <div class="ft-shade" aria-hidden="true"></div>
+      <p class="ft-ask" aria-hidden="true">
+        <span class="ft-ask-row"><span>does</span><span>a city</span><span>need</span><span>a</span><span>bedtime</span></span>
+        <span class="ft-ask-row"><span>if</span><span>nobody</span><span>ever</span><span>goes home?</span></span>
+      </p>
+      <h2 class="ft-word" id="ftWord" aria-label="Stay shining"><span class="ft-word-in">STAY SHINING</span></h2>
+      <p class="ft-tag">not everyone makes it to sunrise.</p>
+    </div>
+
+    <div class="ft-bar">
+      <a href="key.html" class="ft-cta">Get the key <i aria-hidden="true">→</i></a>
+      <div class="ft-grid">
+        <div>
+          <p class="mono ft-h">the bureau</p>
+          <p class="ft-txt">New Detroit Visitor Bureau<br>8 Chrome Heights Plaza, 88th floor<br>open 24/7 · obviously</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="mono ft-h">pages</p>
+          <span class="is-active" aria-current="page">Districts</span><a href="nightlife.html">Nightlife</a><a href="stay.html">Stay</a><a href="events.html">Events</a><a href="map.html">Map</a>
+        </nav>
+        <div>
+          <p class="mono ft-h">city rules</p>
+          <ol class="ft-rules">
+            <li>Blades don't lie.</li>
+            <li>Neither do heels.</li>
+            <li>Never sleep. Always pose.</li>
+            <li>Stay shining.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-sign">concept, design &amp; code by <span class="script">ghostly.grl</span> <b class="red">♥</b></p>
+      <p class="mono">© 2026 New Detroit · a city that does not exist</p>
+      <a href="#top" class="mono ft-top" data-scrollto>back to the opening shot ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b9b9b9"/>
+        <stop offset=".45" stop-color="#f5f5f2"/><stop offset=".55" stop-color="#4a4a4a"/>
+        <stop offset=".72" stop-color="#d8d8d4"/><stop offset="1" stop-color="#7a7a7a"/>
+      </linearGradient>
+      <symbol id="i-key" viewBox="0 0 64 24">
+        <circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="12" r="2.5" fill="currentColor"/>
+        <path d="M19 10.5h40v3H19z" fill="currentColor"/>
+        <path d="M50 13.5h3v6h-3zM56 13.5h3v8h-3zM44 13.5h2.5v4H44z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261009-5"></script>
+  <script src="js/districts.js?v=20261009-5"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

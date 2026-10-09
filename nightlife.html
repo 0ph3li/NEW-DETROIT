@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nightlife — NEW DETROIT</title>
+  <meta name="description" content="Clubs, pool halls and bars in New Detroit, with opening hours and dress codes. Try the door.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,800;1,500&family=Space+Mono:wght@400;700&family=DotGothic16&family=Noto+Sans+JP:wght@900&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261009-5">
+  <link rel="stylesheet" href="css/nightlife.css?v=20261009-5">
+</head>
+<body data-page="nightlife">
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="hdr-logo" aria-label="New Detroit — home">
+      <span class="hdr-mark jp" aria-hidden="true">新</span>
+      <span>NEW DETROIT<small class="mono">official visitor bureau · <span class="jp">新デトロイト</span></small></span>
+    </a>
+    <nav class="hdr-nav" aria-label="Main">
+      <a href="districts.html" data-jp="地区">Districts</a><span aria-hidden="true">•</span>
+      <span class="is-active" aria-current="page" data-jp="夜遊び">Nightlife</span><span aria-hidden="true">•</span>
+      <a href="stay.html" data-jp="宿">Stay</a><span aria-hidden="true">•</span>
+      <a href="events.html" data-jp="催し">Events</a><span aria-hidden="true">•</span>
+      <a href="map.html" data-jp="地図">Map</a>
+    </nav>
+    <div class="hdr-right">
+      <span class="hdr-clock mono" title="It is always 2 AM in New Detroit">ND <b id="clock">02:08:00</b></span>
+      <a href="key.html" class="key-btn" data-magnetic>
+        <span class="key-btn-br">[</span>
+        <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        Get the key
+        <span class="key-btn-br">]</span>
+      </a>
+      <button class="hdr-burger mono" id="burger" aria-label="Open menu" aria-expanded="false">menu <b>+</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-list" aria-label="Mobile">
+      <a href="districts.html"><i class="jp">地区</i>Districts</a>
+      <span class="is-active" aria-current="page"><i class="jp">夜遊び</i>Nightlife</span>
+      <a href="stay.html"><i class="jp">宿</i>Stay</a>
+      <a href="events.html"><i class="jp">催し</i>Events</a>
+      <a href="map.html"><i class="jp">地図</i>Map</a>
+      <a href="key.html" class="menu-key"><i class="jp">鍵</i>[ Get the key ]</a>
+    </nav>
+    <p class="menu-foot mono">the city doesn't sleep · it poses</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 01 · AFTER DARK — poster opener
+         ═══════════════════════════════════════════════ -->
+    <section class="nh" id="nh">
+      <div class="slot fill bw" data-img="img/NIGHTLIFE/hero.jpg" data-fallback="img/HOME/campaign-2.jpg" data-pos="50% 50%" data-alt="Neon signs smeared across a night street">
+        <span class="slot-label">hero.jpg<small>street / club entrance at night · 16:9</small></span>
+      </div>
+      <div class="nh-shade" aria-hidden="true"></div>
+      <p class="hero-ask" aria-hidden="true">
+        <span class="hero-ask-row"><span>the</span><span>last train</span><span>left</span><span>hours ago</span></span>
+        <span class="hero-ask-row"><span>good.</span><span>nobody</span><span>was</span><span>on it</span></span>
+      </p>
+      <span class="nh-neon jp" aria-hidden="true">夜遊び</span>
+      <h1 class="nh-title" aria-label="Nightlife: after dark"><span class="nh-line"><span class="nh-in">AFTER DARK</span></span></h1>
+      <div class="nh-foot">
+        <p class="nh-lead">Clubs, pool halls and bars, stacked nine floors high. Opening hours are a suggestion. Dress codes are not.</p>
+        <span class="mono nh-sig">sc. 01 — nightlife <span class="jp">夜</span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 02 · THE TOWER — floor directory, take the elevator
+         ═══════════════════════════════════════════════ -->
+    <section class="tower-sec" id="tower">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 02 — floor directory <span class="jp">テナント案内</span></p>
+        <h2 class="sec-title" data-split>Nine floors.<br>No exits.</h2>
+        <p class="sec-lead">Every venue in town fits in one building. Pick a floor, the elevator does the rest.</p>
+        <div class="filters" role="group" aria-label="Filter venues">
+          <button type="button" class="filter is-on" data-f="all">all <b>9</b></button>
+          <button type="button" class="filter" data-f="club">clubs <b>3</b></button>
+          <button type="button" class="filter" data-f="pool">pool halls <b>3</b></button>
+          <button type="button" class="filter" data-f="bar">bars <b>3</b></button>
+        </div>
+      </header>
+
+      <div class="tower" id="towerBox">
+        <div class="tower-roof"><span class="jp">ND</span> TOWER 24 <span class="dot">· 新デトロイト ·</span></div>
+        <div class="tower-body">
+          <ol class="floors" id="floors">
+          <li class="fl-row" data-cat="club" data-slug="chrome-chapel">
+            <a href="#chrome-chapel" class="fl-sign" data-floor="8F">
+              <span class="fl-num">8F</span>
+              <span class="fl-name">Chrome Chapel</span>
+              <span class="fl-jp jp">クロム礼拝堂</span>
+              <span class="fl-cat mono">club</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="bar" data-slug="champagne-motel">
+            <a href="#champagne-motel" class="fl-sign" data-floor="7F">
+              <span class="fl-num">7F</span>
+              <span class="fl-name">Champagne Motel</span>
+              <span class="fl-jp jp">シャンパン</span>
+              <span class="fl-cat mono">bar</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="club" data-slug="club-hikari">
+            <a href="#club-hikari" class="fl-sign" data-floor="6F">
+              <span class="fl-num">6F</span>
+              <span class="fl-name">Club Hikari</span>
+              <span class="fl-jp jp">光</span>
+              <span class="fl-cat mono">club</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="bar" data-slug="tiger-bar">
+            <a href="#tiger-bar" class="fl-sign" data-floor="5F">
+              <span class="fl-num">5F</span>
+              <span class="fl-name">The Tiger Bar</span>
+              <span class="fl-jp jp">虎</span>
+              <span class="fl-cat mono">bar</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="pool" data-slug="corner-pocket">
+            <a href="#corner-pocket" class="fl-sign" data-floor="4F">
+              <span class="fl-num">4F</span>
+              <span class="fl-name">Corner Pocket</span>
+              <span class="fl-jp jp">角ポケット</span>
+              <span class="fl-cat mono">pool hall</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="bar" data-slug="lantern-bar">
+            <a href="#lantern-bar" class="fl-sign" data-floor="3F">
+              <span class="fl-num">3F</span>
+              <span class="fl-name">The Lantern Bar</span>
+              <span class="fl-jp jp">提灯</span>
+              <span class="fl-cat mono">bar</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="pool" data-slug="bank-shot">
+            <a href="#bank-shot" class="fl-sign" data-floor="2F">
+              <span class="fl-num">2F</span>
+              <span class="fl-name">Bank Shot</span>
+              <span class="fl-jp jp">バンクショット</span>
+              <span class="fl-cat mono">pool hall</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="pool" data-slug="cue-club">
+            <a href="#cue-club" class="fl-sign" data-floor="1F">
+              <span class="fl-num">1F</span>
+              <span class="fl-name">The Cue Club</span>
+              <span class="fl-jp jp">玉突き</span>
+              <span class="fl-cat mono">pool hall</span>
+            </a>
+          </li>
+          <li class="fl-row" data-cat="club" data-slug="downstairs">
+            <a href="#downstairs" class="fl-sign" data-floor="B1">
+              <span class="fl-num">B1</span>
+              <span class="fl-name">Downstairs</span>
+              <span class="fl-jp jp">地下</span>
+              <span class="fl-cat mono">club</span>
+            </a>
+          </li>
+          </ol>
+          <div class="shaft" aria-hidden="true">
+            <div class="lift" id="lift"><span class="dot" id="liftNum">1F</span><i>▲</i></div>
+          </div>
+        </div>
+        <div class="tower-base mono">open 24/7 · elevator inspected never</div>
+      </div>
+    </section>
+
+    <div class="next-st dot" aria-hidden="true">
+      <div class="next-track"><span>★ 夜遊び · DOORS OPEN · PLEASE MIND THE HEELS · DRESS CODES STRICTLY ENFORCED · NO SLEEPING ON THE DANCE FLOOR ★&nbsp;</span><span>★ 夜遊び · DOORS OPEN · PLEASE MIND THE HEELS · DRESS CODES STRICTLY ENFORCED · NO SLEEPING ON THE DANCE FLOOR ★&nbsp;</span></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 03 · THE VENUES — try the door
+         ═══════════════════════════════════════════════ -->
+    <section class="venues" id="venues">
+      <article class="venue" id="chrome-chapel" data-cat="club" data-open="01:00" data-close="sunrise" data-name="Chrome Chapel" data-floor="8F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/chrome-chapel.jpg" data-fallback="img/DISTRICTS/chrome-heights-3.jpg" data-pos="50% 50%" data-ratio="4/5" data-alt="Chrome Chapel, Chrome Heights">
+            <span class="slot-label">chrome-chapel.jpg<small>club interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">8F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">club</span> · Chrome Heights · <span class="jp">クロム礼拝堂</span></p>
+          <h2 class="v-name" data-stretch>Chrome Chapel</h2>
+          <p class="v-line">A red vault on the 88th floor. The DJ plays from an altar and nobody leaves before the sun does.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>01:00 — sunrise</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>mirror shades, nothing matte</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="champagne-motel" data-cat="bar" data-open="00:00" data-close="24/7" data-name="Champagne Motel" data-floor="7F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/champagne-motel.jpg" data-fallback="img/DISTRICTS/fur-coast-2.jpg" data-pos="50% 55%" data-ratio="4/5" data-alt="Champagne Motel, The Fur Coast">
+            <span class="slot-label">champagne-motel.jpg<small>bar interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">7F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">bar</span> · The Fur Coast · <span class="jp">シャンパン</span></p>
+          <h2 class="v-name" data-stretch>Champagne Motel</h2>
+          <p class="v-line">Cherry blossoms that never fall and a bar that never closes. The rooms upstairs are a rumour.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>00:00 — 24/7</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>last night's look</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="club-hikari" data-cat="club" data-open="23:30" data-close="06:00" data-name="Club Hikari" data-floor="6F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/club-hikari.jpg" data-pos="50% 35%" data-ratio="4/5" data-alt="Club Hikari, Lace District">
+            <span class="slot-label">club-hikari.jpg<small>club interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">6F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">club</span> · Lace District · <span class="jp">光</span></p>
+          <h2 class="v-name" data-stretch>Club Hikari</h2>
+          <p class="v-line">A dance floor under a ceiling of red paper parasols. The bass shakes them, the parasols keep the time.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>23:30 — 06:00</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>all black, one red thing</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="tiger-bar" data-cat="bar" data-open="20:00" data-close="05:00" data-name="The Tiger Bar" data-floor="5F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/tiger-bar.jpg" data-fallback="img/DISTRICTS/pool-hall-3.jpg" data-pos="50% 60%" data-ratio="4/5" data-alt="The Tiger Bar, The Pool Hall">
+            <span class="slot-label">tiger-bar.jpg<small>bar interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">5F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">bar</span> · The Pool Hall · <span class="jp">虎</span></p>
+          <h2 class="v-name" data-stretch>The Tiger Bar</h2>
+          <p class="v-line">A tiger on the wall, two coupes on the bar and nobody keeping count.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>20:00 — 05:00</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>claws optional</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="corner-pocket" data-cat="pool" data-open="20:00" data-close="04:00" data-name="Corner Pocket" data-floor="4F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/corner-pocket.jpg" data-pos="45% 55%" data-ratio="4/5" data-alt="Corner Pocket, Silk Row">
+            <span class="slot-label">corner-pocket.jpg<small>pool hall interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">4F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">pool hall</span> · Silk Row · <span class="jp">角ポケット</span></p>
+          <h2 class="v-name" data-stretch>Corner Pocket</h2>
+          <p class="v-line">Painted tigers, leopard stools, a lamp on every table. The pool tables are in the back room, by invitation, and you never celebrate a shot out loud.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>20:00 — 04:00</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>satin and a straight face</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="lantern-bar" data-cat="bar" data-open="18:00" data-close="late" data-name="The Lantern Bar" data-floor="3F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/lantern-bar.jpg" data-fallback="img/DISTRICTS/silk-row-2.jpg" data-pos="50% 50%" data-ratio="4/5" data-alt="The Lantern Bar, Silk Row">
+            <span class="slot-label">lantern-bar.jpg<small>bar interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">3F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">bar</span> · Silk Row · <span class="jp">提灯</span></p>
+          <h2 class="v-name" data-stretch>The Lantern Bar</h2>
+          <p class="v-line">One giant red lantern, forty regulars, no last orders.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>18:00 — late</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>whatever you woke up in</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="bank-shot" data-cat="pool" data-open="22:00" data-close="05:00" data-name="Bank Shot" data-floor="2F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/bank-shot.jpg" data-pos="50% 42%" data-ratio="4/5" data-alt="Bank Shot, The Fur Coast">
+            <span class="slot-label">bank-shot.jpg<small>pool hall interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">2F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">pool hall</span> · The Fur Coast · <span class="jp">バンクショット</span></p>
+          <h2 class="v-name" data-stretch>Bank Shot</h2>
+          <p class="v-line">Koi swimming behind a glass-brick wall, leather booths, and one table in the back that leans a little to the left. Locals know.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>22:00 — 05:00</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>faux fur, no gloves at the table</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="cue-club" data-cat="pool" data-open="21:00" data-close="till you lose" data-name="The Cue Club" data-floor="1F">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/cue-club.jpg" data-fallback="img/DISTRICTS/pool-hall-1.jpg" data-pos="50% 62%" data-ratio="4/5" data-alt="The Cue Club, The Pool Hall">
+            <span class="slot-label">cue-club.jpg<small>pool hall interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">1F</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">pool hall</span> · The Pool Hall · <span class="jp">玉突き</span></p>
+          <h2 class="v-name" data-stretch>The Cue Club</h2>
+          <p class="v-line">Leopard felt and one house rule: whoever loses buys the next round.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>21:00 — till you lose</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>velvet blazer, steady hands</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+      <article class="venue" id="downstairs" data-cat="club" data-open="23:00" data-close="07:00" data-name="Downstairs" data-floor="B1">
+        <div class="v-photo">
+          <div class="slot" data-img="img/NIGHTLIFE/downstairs.jpg" data-fallback="img/DISTRICTS/pool-hall-2.jpg" data-pos="50% 50%" data-ratio="4/5" data-alt="Downstairs, The Pool Hall">
+            <span class="slot-label">downstairs.jpg<small>club interior · 4:5</small></span>
+          </div>
+          <span class="v-stamp" aria-hidden="true"></span>
+          <span class="v-floor dot">B1</span>
+        </div>
+        <div class="v-info">
+          <p class="v-meta mono"><span class="v-cat">club</span> · The Pool Hall · <span class="jp">地下</span></p>
+          <h2 class="v-name" data-stretch>Downstairs</h2>
+          <p class="v-line">A spiral staircase in leopard print. The party is wherever it ends.</p>
+          <div class="v-grid">
+            <div class="v-hours dot"><span class="v-led-label">open</span><b>23:00 — 07:00</b><span class="v-status"></span></div>
+            <div class="v-dress"><span class="mono">dress code</span><b>leopard welcome, sneakers not</b></div>
+          </div>
+          <button class="v-door" type="button"><span>try the door</span><i aria-hidden="true">→</i></button>
+          <p class="v-verdict" aria-live="polite"></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 04 · YOUR NIGHT — the receipt of everywhere that let you in
+         ═══════════════════════════════════════════════ -->
+    <section class="night" id="night">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 04 — your night <span class="jp">今夜の予定</span></p>
+        <h2 class="sec-title" data-split>Your night,<br>printed.</h2>
+        <p class="sec-lead">Every door that let you in, in the order you should hit them. Nobody checks the receipt. Keep it anyway.</p>
+      </header>
+      <div class="receipt" id="receipt">
+        <div class="rc-head">
+          <b>ND TOWER 24</b>
+          <span>NIGHT PASS · <span id="rcDate"></span></span>
+          <span class="jp">新デトロイト</span>
+        </div>
+        <ol class="rc-list" id="rcList"></ol>
+        <p class="rc-empty" id="rcEmpty">no doors yet. go try one ↑</p>
+        <div class="rc-foot">
+          <span>STOPS <b id="rcCount">0</b></span>
+          <span>SLEEP <b>0 H</b></span>
+        </div>
+        <div class="rc-bar" aria-hidden="true"></div>
+        <button class="rc-clear mono" id="rcClear" type="button">start the night over</button>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#night" class="night-pill" id="nightPill" data-scrollto aria-label="Your night"><span class="dot">YOUR NIGHT</span><b id="pillCount">0</b></a>
+
+  <footer class="ft" id="footer">
+    <!-- the end credits are a poster -->
+    <div class="ft-poster" id="ftPoster">
+      <div class="slot fill bw" data-img="img/HOME/footer.jpg" data-pos="50% 58%" data-alt="The New Detroit skyline glowing over the bay at night">
+        <span class="slot-label">footer.jpg<small>wide B&amp;W crowd / street at night · 16:9</small></span>
+      </div>
+      <div class="ft-shade" aria-hidden="true"></div>
+      <p class="ft-ask" aria-hidden="true">
+        <span class="ft-ask-row"><span>does</span><span>a city</span><span>need</span><span>a</span><span>bedtime</span></span>
+        <span class="ft-ask-row"><span>if</span><span>nobody</span><span>ever</span><span>goes home?</span></span>
+      </p>
+      <h2 class="ft-word" id="ftWord" aria-label="Stay shining"><span class="ft-word-in">STAY SHINING</span></h2>
+      <p class="ft-tag">not everyone makes it to sunrise.</p>
+    </div>
+
+    <div class="ft-bar">
+      <a href="key.html" class="ft-cta">Get the key <i aria-hidden="true">→</i></a>
+      <div class="ft-grid">
+        <div>
+          <p class="mono ft-h">the bureau</p>
+          <p class="ft-txt">New Detroit Visitor Bureau<br>8 Chrome Heights Plaza, 88th floor<br>open 24/7 · obviously</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="mono ft-h">pages</p>
+          <a href="districts.html">Districts</a><span class="is-active" aria-current="page">Nightlife</span><a href="stay.html">Stay</a><a href="events.html">Events</a><a href="map.html">Map</a>
+        </nav>
+        <div>
+          <p class="mono ft-h">city rules</p>
+          <ol class="ft-rules">
+            <li>Blades don't lie.</li>
+            <li>Neither do heels.</li>
+            <li>Never sleep. Always pose.</li>
+            <li>Stay shining.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-sign">concept, design &amp; code by <span class="script">ghostly.grl</span> <b class="red">♥</b></p>
+      <p class="mono">© 2026 New Detroit · a city that does not exist</p>
+      <a href="#top" class="mono ft-top" data-scrollto>back to the opening shot ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b9b9b9"/>
+        <stop offset=".45" stop-color="#f5f5f2"/><stop offset=".55" stop-color="#4a4a4a"/>
+        <stop offset=".72" stop-color="#d8d8d4"/><stop offset="1" stop-color="#7a7a7a"/>
+      </linearGradient>
+      <symbol id="i-key" viewBox="0 0 64 24">
+        <circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="12" r="2.5" fill="currentColor"/>
+        <path d="M19 10.5h40v3H19z" fill="currentColor"/>
+        <path d="M50 13.5h3v6h-3zM56 13.5h3v8h-3zM44 13.5h2.5v4H44z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261009-5"></script>
+  <script src="js/nightlife.js?v=20261009-5"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

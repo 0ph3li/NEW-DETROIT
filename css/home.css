@@ -1,0 +1,291 @@
+/* =========================================================
+   NEW DETROIT — home.css
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* =========================================================
+   LOADER — red DETROIT stretched over grain, fills bottom-up
+   ========================================================= */
+.loader { position: fixed; inset: 0; z-index: 300; overflow: hidden; background: var(--ink); color: var(--red); cursor: pointer; }
+body:not(.is-loading) .loader { pointer-events: none; }
+.ld-word { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.ld-layer {
+  grid-area: 1 / 1; width: max-content; white-space: nowrap; transform: scaleY(var(--sy, 1));
+  font-family: var(--cond); font-weight: 700; line-height: .8; letter-spacing: -.01em; text-transform: uppercase;
+}
+.ld-layer i { font-style: normal; display: inline-block; }
+.ld-layer--line { color: transparent; -webkit-text-stroke: 1.5px var(--red); }
+.ld-layer--fill { color: var(--red); }
+/* the fill rises with transforms only (GPU), so it stays smooth while the page is busy */
+.ld-fillwrap { grid-area: 1 / 1; display: block; transform: scaleY(var(--sy, 1)); }
+.ld-fillwrap .ld-layer { display: block; transform: translateY(-100%); will-change: transform; }
+.ld-clip { display: block; overflow: hidden; transform: translateY(100%); will-change: transform; }
+.ld-block { position: absolute; z-index: 3; background: var(--red); opacity: 0; }
+.ld-foot { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 22px; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.ld-pct { font-family: var(--cond); font-weight: 700; font-size: clamp(44px, 6vw, 96px); line-height: .8; color: var(--bone); font-variant-numeric: tabular-nums; }
+.ld-pct b { font-weight: 700; }
+.ld-msg { color: var(--ivory-2); }
+.ld-tag { font-family: var(--cond); font-weight: 600; font-size: clamp(13px, 1.4vw, 20px); text-transform: uppercase; letter-spacing: .03em; }
+
+/* =========================================================
+   SC. 01 · HERO — the campaign, red type stretched over the street
+   ========================================================= */
+.hero { position: relative; background: var(--ink); }
+.hero-stage { position: relative; height: 100svh; min-height: 600px; overflow: hidden; }
+.hero-photos { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3px; background: var(--ink); }
+.hero-ph { position: relative; overflow: hidden; }
+.hero-ph .slot-label { top: 40%; }
+.hero-shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(10, 10, 10, .65) 0%, transparent 26%, transparent 52%, rgba(10, 10, 10, .8) 100%); }
+.hero-ask { top: calc(var(--hdr-h) + 18px); right: calc(var(--gutter) + 64px); }
+
+.hero-title { position: absolute; left: 0; right: 0; bottom: 19%; z-index: 2; margin: 0; display: grid; justify-items: center; gap: 1.4vh; pointer-events: none; }
+.ht-line { display: block; }
+.ht-in { transform: scaleY(var(--sy, 1)); transform-origin: 50% 0; }
+.ht-in, .ft-word-in { display: inline-block; width: max-content; white-space: nowrap; font-family: var(--cond); font-weight: 700; line-height: .8; letter-spacing: -.01em; color: var(--red); }
+.ht-in i { font-style: normal; display: inline-block; transform-origin: 50% 100%; }
+
+/* vertical neon sign, like the ones stacked on every Shibuya façade */
+.neon {
+  position: absolute; right: var(--gutter); top: calc(var(--hdr-h) + 14px); z-index: 3;
+  display: flex; align-items: center; gap: 10px; padding: 12px 7px; writing-mode: vertical-rl;
+  background: var(--red); color: var(--bone); box-shadow: 0 0 36px rgba(211, 18, 27, .55), 0 0 2px #fff inset;
+  animation: neon 5s steps(1) infinite;
+}
+.neon .jp { font-size: clamp(18px, 1.7vw, 26px); letter-spacing: .1em; }
+.neon small { font-size: 9px; letter-spacing: .22em; }
+@keyframes neon { 0%, 100% { opacity: 1; } 31% { opacity: .35; } 32% { opacity: 1; } 34% { opacity: .5; } 35% { opacity: 1; } 78% { opacity: .4; } 79% { opacity: 1; } }
+
+.hero-foot { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 48px; z-index: 3; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
+.hero-vo {
+  max-width: 560px; margin: 0; padding: 12px 14px; background: rgba(10, 10, 10, .85);
+  font-size: clamp(11px, .92vw, 13.5px); font-weight: 600; line-height: 1.55; letter-spacing: .08em; text-transform: uppercase; color: var(--ivory);
+}
+.hero-vo b { color: var(--red); font-weight: 800; }
+.hero-sig { font-family: var(--cond); font-weight: 700; font-size: clamp(18px, 2vw, 30px); line-height: 1; color: var(--bone); white-space: nowrap; }
+.lbox { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 14px; z-index: 3; display: flex; justify-content: space-between; gap: 16px; color: var(--graphite); }
+.rec { display: inline-flex; align-items: center; gap: 8px; }
+.rec i { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: blink 1.1s steps(2, start) infinite; }
+.rec b { color: var(--ivory); font-weight: 400; font-variant-numeric: tabular-nums; }
+.scroll-cue i { display: inline-block; font-style: normal; animation: cue 1.6s var(--ease) infinite; }
+@keyframes cue { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(4px); } }
+
+/* zebra crossing between scenes */
+.zebra { position: relative; height: 84px; overflow: hidden; background: var(--ink); }
+.zebra-track { position: absolute; top: 16px; bottom: 16px; left: -200px; right: -200px; background: repeating-linear-gradient(90deg, var(--bone) 0 52px, transparent 52px 104px); }
+
+/* =========================================================
+   SC. 02 · THE BIG SCREEN — subtitles on a building screen
+   ========================================================= */
+.vo { position: relative; background: var(--ink); }
+.vo-stage { position: relative; height: 100svh; min-height: 560px; overflow: hidden; display: grid; place-items: center; }
+.vo-bg { opacity: .42; }
+.vo-led { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle, transparent 0 1.1px, rgba(0, 0, 0, .6) 1.5px) 0 0 / 4px 4px; }
+.vo-frame { position: absolute; inset: calc(var(--hdr-h) + 16px) var(--gutter) 64px; border: 2px solid rgba(236, 229, 214, .2); pointer-events: none; }
+.vo-corner { position: absolute; top: 10px; font-size: 13px; }
+.vo-corner--tl { left: 12px; color: var(--red); }
+.vo-corner--tr { right: 12px; color: var(--ivory-2); }
+.vo-subs { position: relative; z-index: 2; display: grid; gap: 1em; padding: 0 var(--gutter); }
+.vo-sub {
+  margin: 0 auto; max-width: 15ch; text-align: center; font-family: var(--cond); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(38px, 6.4vw, 110px); line-height: .9; color: var(--bone);
+}
+.vo-sub em { font-style: normal; color: var(--red); }
+.motion .vo-subs { grid-template-areas: "s"; }
+.motion .vo-sub { grid-area: s; align-self: center; }
+.vo-ticker { position: absolute; left: 0; right: 0; bottom: 18px; z-index: 2; overflow: hidden; color: var(--red); font-size: clamp(14px, 1.4vw, 20px); text-shadow: 0 0 10px rgba(255, 40, 30, .6); }
+.vo-ticker-track { display: flex; width: max-content; animation: ticker 36s linear infinite; }
+.vo-ticker-track span { white-space: nowrap; }
+.vo-ticker b { font-weight: 400; color: var(--bone); }
+@keyframes ticker { to { transform: translateX(-50%); } }
+.vo-count { position: absolute; right: calc(var(--gutter) + 14px); bottom: 74px; z-index: 2; color: var(--graphite); }
+.vo-count b { color: var(--ivory); font-weight: 400; }
+
+/* =========================================================
+   SC. 03 · DISTRICTS — station signs on fabric swatches
+   ========================================================= */
+.dist { position: relative; padding: clamp(90px, 12vw, 170px) var(--gutter) clamp(60px, 8vw, 120px); background: var(--bone); color: var(--ink); }
+.dist .kicker, .pose .kicker { color: #5d5951; }
+.sec-head { position: relative; margin-bottom: clamp(40px, 5vw, 70px); }
+
+.swatches { display: grid; gap: 8px; }
+.sw {
+  position: relative; display: grid; grid-template-rows: auto 0fr; overflow: hidden;
+  background: var(--ink); cursor: pointer; transition: grid-template-rows .9s var(--ease);
+}
+.sw.is-open { grid-template-rows: auto 1fr; cursor: default; }
+.sw-tex { position: absolute; inset: 0; transition: transform 1.4s var(--ease-out); }
+.sw:hover .sw-tex { transform: scale(1.04); }
+.sw-row { position: relative; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: clamp(16px, 2.2vw, 28px) clamp(14px, 2vw, 26px); }
+
+.sw-fab { margin-left: auto; padding: 6px 10px; background: var(--ink); color: var(--bone); }
+.sw-body { position: relative; min-height: 0; overflow: hidden; display: flex; gap: clamp(14px, 2vw, 28px); align-items: flex-end; padding: 0 clamp(14px, 2vw, 26px); }
+.sw.is-open .sw-body { padding-bottom: clamp(16px, 2vw, 26px); }
+.sw-photo { flex: 0 0 clamp(170px, 20vw, 300px); border: 6px solid var(--bone); }
+.sw-copy { max-width: 520px; padding: clamp(16px, 2vw, 26px); background: var(--bone); color: var(--ink); border-left: 7px solid var(--red); }
+.sw-line { margin: 0 0 14px; font-size: clamp(17px, 1.5vw, 22px); font-weight: 600; line-height: 1.25; }
+.sw-meta { margin: 0; color: #4a4741; }
+.sw-meta b { color: var(--red); font-weight: 700; }
+.sw-go { margin-top: 16px; }
+.dist-all { margin-top: 30px; }
+.dist-test { margin-left: 30px; color: var(--red); }
+@media (max-width: 700px) { .dist-test { margin-left: 0; margin-top: 14px; } }
+
+/* =========================================================
+   SC. 04 · TONIGHT — station departure board
+   ========================================================= */
+.tonight { position: relative; padding: clamp(90px, 11vw, 160px) var(--gutter); background: var(--ink); overflow: hidden; }
+.tonight .sec-head { margin-bottom: clamp(30px, 4vw, 50px); }
+.tonight .txt-link { margin-top: 28px; color: var(--ivory); }
+.board { position: relative; overflow: hidden; background: #050505; border: 2px solid #262626; box-shadow: 0 30px 80px rgba(0, 0, 0, .6); font-family: var(--dot); }
+.board::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle, transparent 0 1.1px, rgba(0, 0, 0, .45) 1.5px) 0 0 / 4px 4px; }
+.board-top { display: flex; justify-content: space-between; gap: 20px; padding: 12px 20px; background: var(--red); color: var(--ink); font-size: clamp(14px, 1.4vw, 19px); }
+.board-top b { font-weight: 400; }
+.board-head, .board-row { display: grid; grid-template-columns: 80px minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.6fr) 130px; gap: 18px; align-items: center; padding: 12px 20px; }
+.board-head { color: var(--graphite); border-bottom: 1px solid #222; }
+.board-row { border-bottom: 1px dashed #1f1f1f; font-size: clamp(14px, 1.45vw, 21px); color: #ff3b2f; text-shadow: 0 0 8px rgba(255, 40, 30, .55); text-transform: uppercase; letter-spacing: .04em; }
+.board-row .c-time, .board-row .c-venue { color: var(--bone); text-shadow: 0 0 8px rgba(255, 255, 255, .25); }
+.st { justify-self: start; padding: 2px 8px; }
+.st--last { background: var(--red); color: var(--ink); text-shadow: none; animation: blink 1s steps(2, start) infinite; }
+.st--full { color: var(--graphite); text-shadow: none; text-decoration: line-through; }
+.board-note { margin: 0; padding: 12px 20px; color: var(--red); font-size: 13px; white-space: nowrap; overflow: hidden; }
+
+/* =========================================================
+   SC. 05 · IT POSES — viewfinder + flash
+   ========================================================= */
+.pose { position: relative; padding: clamp(90px, 11vw, 160px) var(--gutter); background: var(--bone); color: var(--ink); overflow: hidden; }
+.pose-head { position: relative; z-index: 2; text-align: center; margin-bottom: clamp(30px, 4vw, 50px); }
+.pose-head .kicker { justify-content: center; }
+.pose-head .sec-title { transform-origin: 50% 0; }
+.pose-head .sec-lead { margin-left: auto; margin-right: auto; }
+
+.pose-wall { position: relative; height: clamp(660px, 66vw, 1000px); max-width: 1320px; margin: 0 auto; }
+.pz { position: absolute; margin: 0; padding: 10px 10px 34px; background: #fff; box-shadow: 0 18px 40px rgba(0, 0, 0, .18), 0 2px 0 rgba(0, 0, 0, .1); transition: box-shadow .4s; }
+.pz { cursor: zoom-in; }
+.pz figcaption { position: absolute; left: 12px; right: 12px; bottom: 9px; display: flex; justify-content: space-between; gap: 10px; color: #2b2926; white-space: nowrap; overflow: hidden; }
+.pz figcaption em { font-style: normal; color: var(--red); }
+.pz .slot > img { transition: filter .5s; }
+.pz:hover .slot > img { filter: saturate(1.25) contrast(1.05); }
+.pz .slot { outline-color: rgba(10, 10, 10, .3); background-color: #d8d2c3; background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(10, 10, 10, .06) 14px 15px); }
+.pz .slot-label { color: rgba(10, 10, 10, .65); }
+.pz .slot-label small { color: rgba(10, 10, 10, .45); }
+.pz--1 { left: 1%; top: 6%; width: 27%; rotate: -5deg; }
+.pz--2 { left: 25%; top: 46%; width: 21%; rotate: 3deg; z-index: 2; }
+.pz--3 { left: 47%; top: 0%; width: 17%; rotate: -2deg; }
+.pz--4 { left: 77%; top: 10%; width: 17%; rotate: 5deg; }
+.pz--5 { left: 58%; top: 44%; width: 20%; rotate: -6deg; z-index: 3; }
+.pz.is-shot { box-shadow: 0 0 0 3px var(--red), 0 18px 40px rgba(0, 0, 0, .2); }
+.pose-count { position: absolute; left: 3%; bottom: 3%; margin: 0; }
+.pose-count b { color: var(--red); font-weight: 400; font-variant-numeric: tabular-nums; }
+
+.pz-box { position: fixed; inset: 0; z-index: 240; display: grid; place-items: center; align-content: center; gap: 18px; padding: 20px; background: rgba(10, 10, 10, .86); opacity: 0; visibility: hidden; cursor: zoom-out; }
+.pz-print { position: relative; margin: 0; width: min(86vw, 480px); padding: 14px 14px 20px; background: #fff; color: var(--ink); box-shadow: 0 40px 90px rgba(0, 0, 0, .7); }
+.pz-print-img { overflow: hidden; background: #111; }
+.pz-print-img img { display: block; width: 100%; max-height: 62vh; object-fit: cover; }
+.pz-print figcaption { display: grid; gap: 6px; padding-top: 14px; }
+.pz-story { margin: 0; font-size: clamp(17px, 1.6vw, 21px); font-weight: 600; line-height: 1.25; }
+.pz-stamp { position: absolute; right: -16px; top: 22px; padding: 6px 10px; border: 3px solid var(--red); color: var(--red); background: rgba(255, 255, 255, .88); font-size: 22px; rotate: 10deg; }
+.pz-close { margin: 0; color: var(--graphite); }
+.viewfinder { position: absolute; left: 0; top: 0; z-index: 5; width: 220px; height: 150px; margin: -75px 0 0 -110px; pointer-events: none; opacity: 0; transition: opacity .3s; }
+.pose.is-aiming { cursor: none; }
+.pose.is-aiming .viewfinder { opacity: 1; }
+.vf-c { position: absolute; width: 26px; height: 26px; border: 0 solid var(--ink); }
+.vf-c--tl { left: 0; top: 0; border-width: 2px 0 0 2px; }
+.vf-c--tr { right: 0; top: 0; border-width: 2px 2px 0 0; }
+.vf-c--bl { left: 0; bottom: 0; border-width: 0 0 2px 2px; }
+.vf-c--br { right: 0; bottom: 0; border-width: 0 2px 2px 0; }
+.viewfinder::before, .viewfinder::after { content: ""; position: absolute; left: 50%; top: 50%; background: var(--red); }
+.viewfinder::before { width: 18px; height: 1.5px; margin: -.75px 0 0 -9px; }
+.viewfinder::after { width: 1.5px; height: 18px; margin: -9px 0 0 -.75px; }
+.vf-rec { position: absolute; left: 8px; top: 8px; display: flex; align-items: center; gap: 5px; font-size: 9px; }
+.vf-rec i { width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: blink 1s steps(2, start) infinite; }
+.vf-iso { position: absolute; right: 8px; bottom: 8px; font-size: 9px; }
+
+/* =========================================================
+   SC. 06 · THE WALL — wheatpasted posters
+   ========================================================= */
+.wall {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(30px, 5vw, 80px); align-items: center;
+  padding: clamp(90px, 11vw, 160px) var(--gutter); overflow: hidden;
+  background:
+    radial-gradient(80% 60% at 70% 50%, rgba(255, 255, 255, .05), transparent 70%),
+    repeating-linear-gradient(0deg, transparent 0 46px, rgba(255, 255, 255, .025) 46px 48px),
+    #121212;
+}
+.wall-copy { position: relative; z-index: 2; }
+.wall .kicker { color: var(--graphite); }
+.wall .sec-lead { color: var(--ivory-2); }
+.wall .txt-link { margin-top: 26px; }
+.posters { position: relative; height: clamp(460px, 48vw, 680px); }
+.poster {
+  position: absolute; left: 50%; top: 50%; width: min(82%, 420px); aspect-ratio: 5 / 7; margin: 0;
+  background: var(--ink); color: var(--bone); overflow: hidden; cursor: grab; user-select: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .6);
+}
+.poster:active { cursor: grabbing; }
+.poster .slot { position: absolute; inset: 0; aspect-ratio: auto; outline: 0; }
+.poster-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, .35) 0%, transparent 30%, transparent 60%, rgba(0, 0, 0, .7) 100%); }
+.poster-paste { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: soft-light;
+  background:
+    linear-gradient(97deg, transparent 30%, rgba(255, 255, 255, .25) 31%, transparent 34%),
+    linear-gradient(83deg, transparent 62%, rgba(0, 0, 0, .35) 63%, transparent 66%),
+    linear-gradient(176deg, transparent 44%, rgba(255, 255, 255, .2) 45%, transparent 47%);
+}
+.poster-top { position: absolute; left: 0; right: 0; top: 6%; text-align: center; }
+.poster-title { display: block; font-family: var(--cond); font-weight: 700; font-size: clamp(26px, 3.2vw, 44px); line-height: .95; text-transform: uppercase; letter-spacing: .01em; }
+.poster-sub { display: block; margin-top: 6px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; }
+.poster-big { position: absolute; left: 8%; top: 40%; font-family: var(--cond); font-weight: 700; font-size: clamp(56px, 7vw, 104px); line-height: 1; color: var(--ink); background: var(--bone); padding: 0 .1em; }
+.poster-side { position: absolute; right: 4%; top: 19%; writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--cond); font-weight: 700; font-size: clamp(44px, 5.4vw, 80px); line-height: .9; letter-spacing: .01em; }
+.poster-foot { position: absolute; left: 8%; right: 8%; bottom: 5%; display: flex; justify-content: space-between; align-items: flex-end; font-family: var(--mono); font-size: 8.5px; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
+.poster-foot b { font-family: var(--cond); font-size: 20px; font-weight: 700; color: var(--red); }
+.poster-half { position: absolute; z-index: 20; pointer-events: none; }
+.poster .slot-label { top: 70%; }
+.posters-hint { position: absolute; right: 2%; bottom: -2%; color: var(--graphite); }
+
+/* =========================================================
+   SC. 07 · THE KEY
+   ========================================================= */
+.keysec { position: relative; display: grid; justify-items: center; text-align: center; padding: clamp(90px, 11vw, 160px) var(--gutter) clamp(80px, 9vw, 130px); overflow: hidden; background: #050505; }
+.keysec-velvet {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(50% 45% at 50% 42%, rgba(236, 229, 214, .12), transparent 70%),
+    radial-gradient(70% 50% at 20% 90%, rgba(90, 90, 90, .18), transparent 70%),
+    radial-gradient(60% 40% at 85% 10%, rgba(90, 90, 90, .14), transparent 70%);
+}
+.keysec .kicker { position: relative; }
+.key-title { position: relative; margin: 0; font-family: var(--cond); font-weight: 700; text-transform: uppercase; font-size: clamp(38px, 6.4vw, 104px); line-height: .94; color: var(--bone); }
+.key-hint { position: relative; margin: 18px 0 30px; color: var(--graphite); }
+.key-btn--big { font-size: 14px; padding: 16px 8px; color: var(--bone); }
+.key-btn--big::before { inset: 2px 16px; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+  .sw-body { flex-direction: column; align-items: stretch; }
+  .sw-photo { flex-basis: auto; width: min(240px, 70%); }
+  .sw-fab { margin-left: 0; }
+  .wall { grid-template-columns: 1fr; }
+  .posters { height: clamp(460px, 120vw, 600px); }
+  .pose-wall { height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 16px; align-items: start; padding-bottom: 40px; }
+  .pz { position: relative; left: auto; top: auto; width: auto; }
+  .pz--5 { grid-column: 1 / -1; width: 62%; justify-self: center; }
+  .pose-count { left: 0; bottom: 0; }
+  .board-head { display: none; }
+  .board-row { grid-template-columns: 56px minmax(0, 1fr) auto; grid-template-areas: "t v s" ". d d" ". c c"; gap: 4px 12px; }
+  .c-time { grid-area: t; } .c-venue { grid-area: v; } .c-st { grid-area: s; } .c-dist { grid-area: d; font-size: .75em; } .c-dress { grid-area: c; font-size: .75em; }
+}
+@media (max-width: 600px) {
+  .hero-foot { flex-direction: column; align-items: flex-start; gap: 10px; bottom: 40px; }
+  .hero-title { bottom: 30%; }
+  .lbox span:nth-child(2) { display: none; }
+  .neon { padding: 10px 6px; }
+  .hero-ask { top: calc(var(--hdr-h) + 14px); }
+  .neon small { display: none; }
+  .ld-msg { display: none; }
+  .vo-corner--tr { display: none; }
+  .sw-num { width: 50px; height: 50px; }
+  .sw-num b { font-size: 21px; }
+  .pz { padding: 6px 6px 26px; }
+  .pz figcaption { font-size: 8.5px; left: 7px; right: 7px; bottom: 7px; }
+}

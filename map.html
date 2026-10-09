@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Map — NEW DETROIT</title>
+  <meta name="description" content="The illustrated night map of New Detroit: five districts, one loop line, every club, hotel and pop-up.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,800;1,500&family=Space+Mono:wght@400;700&family=DotGothic16&family=Noto+Sans+JP:wght@900&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261009-5">
+  <link rel="stylesheet" href="css/map.css?v=20261009-5">
+</head>
+<body data-page="map">
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="hdr" id="hdr">
+    <a href="index.html" class="hdr-logo" aria-label="New Detroit — home">
+      <span class="hdr-mark jp" aria-hidden="true">新</span>
+      <span>NEW DETROIT<small class="mono">official visitor bureau · <span class="jp">新デトロイト</span></small></span>
+    </a>
+    <nav class="hdr-nav" aria-label="Main">
+      <a href="districts.html" data-jp="地区">Districts</a><span aria-hidden="true">•</span>
+      <a href="nightlife.html" data-jp="夜遊び">Nightlife</a><span aria-hidden="true">•</span>
+      <a href="stay.html" data-jp="宿">Stay</a><span aria-hidden="true">•</span>
+      <a href="events.html" data-jp="催し">Events</a><span aria-hidden="true">•</span>
+      <span class="is-active" aria-current="page" data-jp="地図">Map</span>
+    </nav>
+    <div class="hdr-right">
+      <span class="hdr-clock mono" title="It is always 2 AM in New Detroit">ND <b id="clock">02:08:00</b></span>
+      <a href="key.html" class="key-btn" data-magnetic>
+        <span class="key-btn-br">[</span>
+        <svg viewBox="0 0 64 24" aria-hidden="true"><use href="#i-key"/></svg>
+        Get the key
+        <span class="key-btn-br">]</span>
+      </a>
+      <button class="hdr-burger mono" id="burger" aria-label="Open menu" aria-expanded="false">menu <b>+</b></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-list" aria-label="Mobile">
+      <a href="districts.html"><i class="jp">地区</i>Districts</a>
+      <a href="nightlife.html"><i class="jp">夜遊び</i>Nightlife</a>
+      <a href="stay.html"><i class="jp">宿</i>Stay</a>
+      <a href="events.html"><i class="jp">催し</i>Events</a>
+      <span class="is-active" aria-current="page"><i class="jp">地図</i>Map</span>
+      <a href="key.html" class="menu-key"><i class="jp">鍵</i>[ Get the key ]</a>
+    </nav>
+    <p class="menu-foot mono">the city doesn't sleep · it poses</p>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 01 · YOU ARE HERE — poster opener
+         ═══════════════════════════════════════════════ -->
+    <section class="mh" id="mh">
+      <div class="slot fill bw" data-img="img/MAP/hero.jpg" data-fallback="img/DISTRICTS/chrome-heights-2.jpg" data-pos="45% 40%" data-alt="Towers lit up over the river at night">
+        <span class="slot-label">hero.jpg<small>city from above at night · 16:9</small></span>
+      </div>
+      <div class="mh-shade" aria-hidden="true"></div>
+      <p class="hero-ask" aria-hidden="true">
+        <span class="hero-ask-row"><span>five</span><span>districts.</span><span>one</span><span>loop line.</span></span>
+        <span class="hero-ask-row"><span>zero</span><span>ways</span><span>to get</span><span>home early.</span></span>
+      </p>
+      <span class="mh-neon" aria-hidden="true"><span class="jp">現在地</span><small class="dot">YOU ARE HERE</small></span>
+      <h1 class="mh-title" aria-label="Map: you are here"><span class="mh-line"><span class="mh-in">YOU ARE HERE</span></span></h1>
+      <div class="mh-foot">
+        <p class="mh-lead">The night map of New Detroit, drawn by hand and lit by neon. Every club, hotel and pop-up, one pin at a time. Drag it, zoom it, switch the lights off.</p>
+        <span class="mono mh-sig">sc. 01 — map <span class="jp">地図</span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 02 · THE NIGHT MAP
+         ═══════════════════════════════════════════════ -->
+    <section class="map-sec" id="map" aria-label="Interactive night map">
+      <div class="map" id="mapBox">
+        <svg class="map-svg" id="mapSvg" viewBox="0 0 1600 1000" role="img" aria-label="Illustrated night map of New Detroit"></svg>
+        <div class="torch" id="torch" aria-hidden="true"></div>
+
+        <div class="map-top">
+          <div class="map-title"><span class="jp">新デトロイト</span><b>NIGHT MAP</b><span class="mono">sheet 08 · drawn at 02:00</span></div>
+          <div class="layers" role="group" aria-label="Map layers">
+            <button type="button" class="layer is-on" data-layer="nightlife"><i class="pin-key pin-key--night"></i>nightlife <b>9</b></button>
+            <button type="button" class="layer is-on" data-layer="stay"><i class="pin-key pin-key--stay"></i>stay <b>6</b></button>
+            <button type="button" class="layer is-on" data-layer="events"><i class="pin-key pin-key--event"></i>events <b>8</b></button>
+            <button type="button" class="layer is-on" data-layer="line"><i class="pin-key pin-key--line"></i>loop line</button>
+          </div>
+        </div>
+
+        <div class="map-tools">
+          <button type="button" class="tool" id="zoomIn" aria-label="Zoom in">+</button>
+          <button type="button" class="tool" id="zoomOut" aria-label="Zoom out">−</button>
+          <button type="button" class="tool tool--wide" id="zoomReset" aria-label="Reset the view">fit</button>
+          <button type="button" class="tool tool--wide tool--torch" id="torchBtn" aria-pressed="false">lights out</button>
+        </div>
+
+        <div class="map-legend mono" aria-hidden="true">
+          <span class="compass"><b>N</b><i></i></span>
+          <span class="scale"><i></i>1 block = 1 song</span>
+        </div>
+
+        <aside class="card" id="card" aria-live="polite" hidden>
+          <button type="button" class="card-x" id="cardX" aria-label="Close">×</button>
+          <div class="card-img"><img id="cardImg" alt=""></div>
+          <div class="card-body">
+            <p class="card-type mono" id="cardType"></p>
+            <h2 class="card-name" id="cardName"></h2>
+            <p class="card-meta dot" id="cardMeta"></p>
+            <p class="card-line" id="cardLine"></p>
+            <a class="card-go" id="cardGo" href="#">go there <i aria-hidden="true">→</i></a>
+          </div>
+        </aside>
+
+        <div class="map-tip mono" id="tip" aria-hidden="true"></div>
+        <p class="map-hint mono" aria-hidden="true">drag to move · scroll or pinch to zoom · click a pin</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SC. 03 · THE INDEX — every pin as a list
+         ═══════════════════════════════════════════════ -->
+    <section class="index" id="index">
+      <header class="sec-head">
+        <p class="kicker mono">sc. 03 — the index <span class="jp">索引</span></p>
+        <h2 class="sec-title" data-split>Every pin.<br>No excuses.</h2>
+        <p class="sec-lead">The same map, as a list. Click a name to fly to it on the map.</p>
+      </header>
+      <div class="index-cols" id="indexCols"></div>
+    </section>
+
+  </main>
+
+  <footer class="ft" id="footer">
+    <!-- the end credits are a poster -->
+    <div class="ft-poster" id="ftPoster">
+      <div class="slot fill bw" data-img="img/HOME/footer.jpg" data-pos="50% 58%" data-alt="The New Detroit skyline glowing over the bay at night">
+        <span class="slot-label">footer.jpg<small>wide B&amp;W crowd / street at night · 16:9</small></span>
+      </div>
+      <div class="ft-shade" aria-hidden="true"></div>
+      <p class="ft-ask" aria-hidden="true">
+        <span class="ft-ask-row"><span>does</span><span>a city</span><span>need</span><span>a</span><span>bedtime</span></span>
+        <span class="ft-ask-row"><span>if</span><span>nobody</span><span>ever</span><span>goes home?</span></span>
+      </p>
+      <h2 class="ft-word" id="ftWord" aria-label="Stay shining"><span class="ft-word-in">STAY SHINING</span></h2>
+      <p class="ft-tag">not everyone makes it to sunrise.</p>
+    </div>
+
+    <div class="ft-bar">
+      <a href="key.html" class="ft-cta">Get the key <i aria-hidden="true">→</i></a>
+      <div class="ft-grid">
+        <div>
+          <p class="mono ft-h">the bureau</p>
+          <p class="ft-txt">New Detroit Visitor Bureau<br>8 Chrome Heights Plaza, 88th floor<br>open 24/7 · obviously</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="mono ft-h">pages</p>
+          <a href="districts.html">Districts</a><a href="nightlife.html">Nightlife</a><a href="stay.html">Stay</a><a href="events.html">Events</a><span class="is-active" aria-current="page">Map</span>
+        </nav>
+        <div>
+          <p class="mono ft-h">city rules</p>
+          <ol class="ft-rules">
+            <li>Blades don't lie.</li>
+            <li>Neither do heels.</li>
+            <li>Never sleep. Always pose.</li>
+            <li>Stay shining.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-bottom">
+      <p class="ft-sign">concept, design &amp; code by <span class="script">ghostly.grl</span> <b class="red">♥</b></p>
+      <p class="mono">© 2026 New Detroit · a city that does not exist</p>
+      <a href="#top" class="mono ft-top" data-scrollto>back to the opening shot ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+  <div class="shutter" id="shutter" aria-hidden="true"><i></i><i></i></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- shared defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".22" stop-color="#b9b9b9"/>
+        <stop offset=".45" stop-color="#f5f5f2"/><stop offset=".55" stop-color="#4a4a4a"/>
+        <stop offset=".72" stop-color="#d8d8d4"/><stop offset="1" stop-color="#7a7a7a"/>
+      </linearGradient>
+      <symbol id="i-key" viewBox="0 0 64 24">
+        <circle cx="11" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="12" r="2.5" fill="currentColor"/>
+        <path d="M19 10.5h40v3H19z" fill="currentColor"/>
+        <path d="M50 13.5h3v6h-3zM56 13.5h3v8h-3zM44 13.5h2.5v4H44z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261009-5"></script>
+  <script src="js/map.js?v=20261009-5"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>
